@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Payment;
+use App\PlaceOrder;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Paystack;
 
@@ -15,13 +17,25 @@ class PaymentController extends Controller
      * Redirect the User to Paystack Payment Page
      * @return Url
      */
-    public function redirectToGateway()
+    public function redirectToGateway(Request $request, $place_id)
     {
+        $placeOrder = PlaceOrder::find($place_id);
+        $placeOrder->paystack_reference = $request->reference;
+        $placeOrder->save();
+
+        $data = [
+            'email' => Auth::user()->email,
+            'amount' => $placeOrder->total * 100,
+            'currency' => "NGN",
+            'reference' => $request->reference,
+            'callback_url' => $request->callback_url
+        ];
+
         try{
-            return Paystack::getAuthorizationUrl()->redirectNow();
+            return Paystack::getAuthorizationUrl($data)->redirectNow();
         }catch(\Exception $e) {
             return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
-        }        
+        }
     }
 
     /**
@@ -31,29 +45,28 @@ class PaymentController extends Controller
     public function handleGatewayCallback()
     {
         $paymentDetails = Paystack::getPaymentData();
-        
+        $reference = $paymentDetails['data']['reference'];
 
-        // dd($paymentDetails);
-        // Now you have the payment details,
-        // you can store the authorization_code in your db to allow for recurrent subscriptions
-        // you can then redirect or do whatever you want
-        // ['email', 'amount','status', 'trans_id', 'ref_id'];
+        $place = PlaceOrder::where('paystack_reference', $reference)->first();
+        $place->status = 'paid';
+        $place->save();
 
         $payment=new Payment();
-
-
+        $payment->user_id = Auth::user()->id;
         $payment->email=$paymentDetails['data'] ['customer'] ['email'];
         $payment->status=$paymentDetails['data']['status'];
         $payment->amount=$paymentDetails['data']['amount'];
         $payment->trans_id=$paymentDetails['data']['id'];
-        $payment->ref_id=$paymentDetails['data']['ref_id'];
+        $payment->ref_id= $reference;
 
         if($payment->save())
         {
-            return view('Success');
+            return view('vieworder.success');
         }
         return view('vieworder.form');
     }
+
+
 
 
 

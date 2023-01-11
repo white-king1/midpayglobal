@@ -52,7 +52,7 @@
                                     </div>
                                     <br>
                                     <br>
-                                    
+
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
@@ -86,7 +86,7 @@
                                             <div class="mb-3">
                                                 <label class="form-label" for="exampleInputPassword2">DEPOSIT AMOUNT</label>
                                                 <input class="form-control" name="deposit" id="exampleInputPassword2"
-                                                    type="text" placeholder="Totalcost">
+                                                    type="text" placeholder="AMOUNT">
                                             </div>
                                         </div>
                                     </div>
@@ -140,25 +140,7 @@
                                     </div> --}}
 
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="mb-3">
-                                                <label class="form-label" for="exampleInputPassword2">CHARGES (5% OF EVERY AMOUNT DEPOSITED)</label>
-                                                <input class="form-control" name="charges" id="exampleInputPassword2"
-                                                    type="text" placeholder="MIDPAY FEE">
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="mb-3">
-                                                <label class="form-label" for="exampleInputPassword2">TOTAL COST</label>
-                                                <input class="form-control" name="total" id="exampleInputPassword2"
-                                                    type="text" placeholder="TOTAL COST">
-                                            </div>
-                                        </div>
-                                    </div>
                                     {{-- <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
@@ -169,7 +151,7 @@
                                         </div>
                                     </div> --}}
                                     <div class="card-footer text-end">
-                                         <button class="btn btn-primary">PlaceOrder</button> 
+                                         <button class="btn btn-primary">PlaceOrder</button>
                                         <input class="btn btn-light" type="reset" value="Cancel">
                                     </div>
                         </form>

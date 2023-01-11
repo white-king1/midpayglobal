@@ -119,5 +119,6 @@ Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 
 // PAYSTACK PAYMENT ROUTE
 Route::get('/form', 'PaymentController@show')->name('form');
-Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
-Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback']);
+Route::post('/pay/{place}', 'PaymentController@redirectToGateway')->name('pay');
+Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback'])->name('payment.callback');
+Route::get('/success', 'PaymentController@success')->name('success');
