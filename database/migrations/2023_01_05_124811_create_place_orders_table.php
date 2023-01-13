@@ -25,6 +25,7 @@ class CreatePlaceOrdersTable extends Migration
             $table->integer('total');
             $table->enum('status', ['pending', 'paid', 'completed', 'cancelled'])->default('pending');
             $table->string('seller_id')->nullable();
+            $table->string('buyer_id')->nullable();
             $table->timestamps();
 
         });

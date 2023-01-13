@@ -29,14 +29,13 @@
                         <form class="form theme-form" action="{{ route('order') }}" method="post">
                             @csrf
                             <div class="card-body">
-
-
                                 <div class="row">
                                     <div class="col">
                                         <div>
                                             <label class="form-label" for="exampleFormControlTextarea4">ITEM/ITEMS
                                                 DESCRITPTION</label>
-                                            <input class="form-control" name="description" id="exampleFormControlTextarea4"  type="text" placeholder="description"  rows="3" required>
+                                            <input class="form-control" name="description" id="exampleFormControlTextarea4"
+                                                type="text" placeholder="description" rows="3" required>
                                         </div>
                                     </div>
                                     <br>
@@ -44,7 +43,8 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label class="form-label" for="exampleInputPassword2">TRANSACTION PERIOD (DAYS)</label>
+                                                <label class="form-label" for="exampleInputPassword2">TRANSACTION PERIOD
+                                                    (DAYS)</label>
                                                 <input class="form-control" name="period" id="exampleInputPassword2"
                                                     type="number" placeholder="transaction period (days)">
                                             </div>
@@ -66,8 +66,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label class="form-label"
-                                                    for="exampleFormControlSelect9">CURRENCY</label>
+                                                <label class="form-label" for="exampleFormControlSelect9">CURRENCY</label>
                                                 <select class="form-select digits" name="currency"
                                                     id="exampleFormControlSelect9">
                                                     <option>NGN ₦</option>
@@ -151,13 +150,13 @@
                                         </div>
                                     </div> --}}
                                     <div class="card-footer text-end">
-                                         <button class="btn btn-primary">PlaceOrder</button>
+                                        <button class="btn btn-primary">PlaceOrder</button>
                                         <input class="btn btn-light" type="reset" value="Cancel">
                                     </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
-
-
                 </div>
             </div>
         </div>

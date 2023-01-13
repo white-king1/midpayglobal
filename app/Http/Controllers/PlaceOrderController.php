@@ -5,19 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\PlaceOrder;
 use App\Helpers\Helper;
+use Illuminate\Support\Facades\Auth;
 
 class PlaceOrderController extends Controller
 {
     public function place()
-    {  
+    {
         return view('user.place_order');
+
     }
 
     public function order(Request $request){
         $place_order = $request->transaction_id;
         $transaction_id = Helper::IDGenerator(new PlaceOrder, 'transaction_id', 6, 'MPG');
         $charge = 0.05*$request->deposit;
-   
+
         $place = new PlaceOrder;
         $place->transaction_id = $transaction_id;
         $place->description = $request->description;
@@ -26,6 +28,7 @@ class PlaceOrderController extends Controller
         $place->deposit = $request->deposit;
         $place->charges= $charge;
         $place->total = $request->deposit + $charge;
+        $place->seller_id = Auth::user()->id;
         $place->save();
         return redirect()->route('order.details', $place);
     }
@@ -34,5 +37,17 @@ class PlaceOrderController extends Controller
     {
         return view('vieworder.accept_order', compact('place'));
 
+    }
+
+    public function cancelOrder(PlaceOrder $place_order)
+    {
+        
+        if ($place_order->status != 'pending') {
+            return back()->with(['error' => 'Order cannot be cancelled']);
+        }
+
+        $place_order->status = 'cancelled';
+        $place_order->save();
+        return redirect()->route('user.dashboard');
     }
 }

@@ -38,6 +38,7 @@
                                 </form>
                             </div>
 
+
                         </div>
                     </div>
                 </div>
@@ -60,16 +61,17 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-7">
-                                <form class="theme-form mega-form">
+                                <form class="theme-form mega-form" action="{{ route('withdrawal.details') }}" method="post">
+                                    @csrf
                                     <div class="mb-3">
-                                        <input class="form-control" type="text" placeholder="ACCOUNT HOLDER NAME">
+                                        <input class="form-control" type="text"  name="account_name" placeholder="ACCOUNT HOLDER NAME"  required>
                                     </div>
                                     <div class="mb-3">
-                                        <input class="form-control" type="text" placeholder="ACCOUNT NUMBER">
+                                        <input class="form-control" type="text"   name="account_number" placeholder="ACCOUNT NUMBER"  required>
                                     </div>
 
                                     <div class="mb-3 ">
-                                        <select class="form-select" size="1">
+                                        <select class="form-select" size="1"  name="bank">
                                             <option>Select Bank</option>
                                             <option>SBI</option>
                                             <option>ICICI</option>
@@ -80,14 +82,11 @@
 
 
                                     <div class="mb-3">
-                                        <input class="form-control" type="text" placeholder="Amount">
+                                        <input class="form-control" type="text"   name="amount" placeholder="Amount" required>
                                     </div>
 
                                     <div class="col-12">
-                                        
-                                        <a href="{{route('thanks')}}">
-                                            <button class="btn btn-primary btn-block" type="button" title="">WITHDRAW</button>
-                                        </a>
+                                 <button class="btn btn-primary btn-block" title="">WITHDRAW</button>
                                     </div>
                                 </form>
                             </div>

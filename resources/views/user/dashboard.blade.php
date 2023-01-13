@@ -31,8 +31,7 @@
                                     <h1> {{ Auth::user()->name }}</h1>
                                     <p>Your dashboard is ready!</p>
                                     <br>
-                                    <br>
-                                    <h5>Total Balance: $20,573.67</h5>
+                                    <h5>Available Balance: ₦{{number_format(Auth::user()->wallet->balance)}}</h5>
                                 </div>
                             </div>
                         </div>
@@ -48,15 +47,15 @@
                         <div class="earning-content"><img class="img-fluid" src="../assets/images/avatar.jpg" alt=""><a
                                 href="blog-single.html">
                                 <h4>Wallet Balance</h4>
-                                <h6>Available balance: $573.67</h6>
-                            </a><span>Pending balance: $20,000.00</span>
+                                <h6>Available balance:₦{{number_format(Auth::user()->wallet->balance)}}</h6>
+                            </a><span>Pending balance:₦0.00 </span>
 
                             <div id="earning-chart"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 dash-xl-50">
+            {{-- <div class="col-xl-3 col-md-6 dash-xl-50">
                 <div class="card special-discount">
                     <div class="card-body">
                       <div class="discount-slide owl-carousel owl-theme">
@@ -150,7 +149,7 @@
                       </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="col-xl-4 col-md-6 dash-35 dash-xl-50">
                 <div class="card ongoing-project">
@@ -281,106 +280,6 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-md-6 dash-31 dash-xl-50">
-                <div class="card news-update">
-                    <div class="card-header card-no-border">
-                        <div class="header-top">
-                            <h5 class="m-0">News &amp; Update</h5>
-                            <div class="icon-box onhover-dropdown"><i data-feather="more-horizontal"></i>
-                                <div class="icon-box-show onhover-show-div">
-                                    <ul>
-                                        <li> <a>
-                                                Today</a></li>
-                                        <li> <a>
-                                                Yesterday</a></li>
-                                        <li> <a>
-                                                Tommorow</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body pt-0">
-                        <div class="table-responsive custom-scrollbar">
-                            <table class="table table-bordernone">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                    src="../assets/images/dashboard/rectangle-26.jpg" alt="">
-                                                <div class="media-body"><a href="blog-single.html">
-                                                        <h5>Google Project Apply Reviwe</h5>
-                                                    </a>
-                                                    <p>Today's News Headlines, Breaking...</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-light-theme-light font-theme-light">1 day
-                                                ago</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="media"> <img class="img-fluid me-3 b-r-5"
-                                                    src="../assets/images/dashboard/rectangle-27.jpg" alt="">
-                                                <div class="media-body"><a href="blog-single.html">
-                                                        <h5>Business Logo Create</h5>
-                                                    </a>
-                                                    <p>Check out the latest news from...</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-light-theme-light font-theme-light">2 weeks
-                                                ago</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                    src="../assets/images/dashboard/rectangle-28.jpg" alt="">
-                                                <div class="media-body"><a href="blog-single.html">
-                                                        <h5>Business Project Research</h5>
-                                                    </a>
-                                                    <p>News in English: Get all Breaking...</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-light-theme-light font-theme-light">3 day
-                                                ago</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                    src="../assets/images/dashboard/rectangle-29.jpg" alt="">
-                                                <div class="media-body"><a href="blog-single.html">
-                                                        <h5>Recruitment in it Department</h5>
-                                                    </a>
-                                                    <p>Technology and Indian Business News...</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-light-theme-light font-theme-light">2 hours
-                                                ago</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                    src="../assets/images/dashboard/rectangle-28.jpg" alt="">
-                                                <div class="media-body"><a href="blog-single.html">
-                                                        <h5>Business Project Research</h5>
-                                                    </a>
-                                                    <p>News in English: Get all Breaking...</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-light-theme-light font-theme-light">3 day
-                                                ago</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
             <div class="col-xl-4 col-md-6 dash-31 dash-xl-50">
                 <div class="card recent-activity">
@@ -484,6 +383,108 @@
             </tr>
             </tbody>
             </table>
+            {{-- <div class="col-xl-4 col-md-6 dash-31 dash-xl-50">
+                <div class="card news-update">
+                    <div class="card-header card-no-border">
+                        <div class="header-top">
+                            <h5 class="m-0">News &amp; Update</h5>
+                            <div class="icon-box onhover-dropdown"><i data-feather="more-horizontal"></i>
+                                <div class="icon-box-show onhover-show-div">
+                                    <ul>
+                                        <li> <a>
+                                                Today</a></li>
+                                        <li> <a>
+                                                Yesterday</a></li>
+                                        <li> <a>
+                                                Tommorow</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="table-responsive custom-scrollbar">
+                            <table class="table table-bordernone">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="media"><img class="img-fluid me-3 b-r-5"
+                                                    src="../assets/images/dashboard/rectangle-26.jpg" alt="">
+                                                <div class="media-body"><a href="blog-single.html">
+                                                        <h5>Google Project Apply Reviwe</h5>
+                                                    </a>
+                                                    <p>Today's News Headlines, Breaking...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-light-theme-light font-theme-light">1 day
+                                                ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media"> <img class="img-fluid me-3 b-r-5"
+                                                    src="../assets/images/dashboard/rectangle-27.jpg" alt="">
+                                                <div class="media-body"><a href="blog-single.html">
+                                                        <h5>Business Logo Create</h5>
+                                                    </a>
+                                                    <p>Check out the latest news from...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-light-theme-light font-theme-light">2 weeks
+                                                ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media"><img class="img-fluid me-3 b-r-5"
+                                                    src="../assets/images/dashboard/rectangle-28.jpg" alt="">
+                                                <div class="media-body"><a href="blog-single.html">
+                                                        <h5>Business Project Research</h5>
+                                                    </a>
+                                                    <p>News in English: Get all Breaking...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-light-theme-light font-theme-light">3 day
+                                                ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media"><img class="img-fluid me-3 b-r-5"
+                                                    src="../assets/images/dashboard/rectangle-29.jpg" alt="">
+                                                <div class="media-body"><a href="blog-single.html">
+                                                        <h5>Recruitment in it Department</h5>
+                                                    </a>
+                                                    <p>Technology and Indian Business News...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-light-theme-light font-theme-light">2 hours
+                                                ago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media"><img class="img-fluid me-3 b-r-5"
+                                                    src="../assets/images/dashboard/rectangle-28.jpg" alt="">
+                                                <div class="media-body"><a href="blog-single.html">
+                                                        <h5>Business Project Research</h5>
+                                                    </a>
+                                                    <p>News in English: Get all Breaking...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge badge-light-theme-light font-theme-light">3 day
+                                                ago</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+
+
+
         </div>
     </div>
 </div>
@@ -546,7 +547,7 @@
                                 <div class="media-body">
                                     <p class="font-theme-light">Performance </p>
                                     <h5 class="m-0">+93.82%</h5>
-                                </div><a class="btn btn-primary" href="blog-single.html">New Report</a>
+                                </div><a class="btn btn-primary" href="">New Report</a>
                             </div>
                         </div>
                     </div>
@@ -558,8 +559,8 @@
 <div class="col-xl-3 col-md-6 dash-xl-50">
     <div class="card yearly-chart">
         <div class="card-header card-no-border pb-0">
-            <h5 class="pb-2">$3,500,000</h5>
-            <h6 class="font-theme-light f-14 m-0">November 2021</h6>
+            <h5 class="pb-2">₦{{number_format(Auth::user()->wallet->balance)}}</h5>
+            <h6 class="font-theme-light f-14 m-0">(January-December)2023</h6>
         </div>
         <div class="card-body pt-0">
             <div>
@@ -573,7 +574,7 @@
         <div class="card-body">
             <h6 class="f-22">Premium Access!</h6>
             <p>We add 20+ new features and update community in your project We add 20+ new features</p><a
-                class="btn btn-outline-white_color" href="blog-single.html"> Try now for free</a>
+                class="btn btn-outline-white_color" href=""> Try now for free</a>
         </div>
         <!-- Root element of PhotoSwipe. Must have class pswp.-->
         <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

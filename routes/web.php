@@ -58,20 +58,28 @@ Route::get('/decline','DeclineController@decline')->name('decline');
 Route::get('/congrats','CongratsSellerController@congrats')->name('congrats');
 Route::get('/decline','DeclineSellerController@decline')->name('decline');
 Route::get('/buyer', 'buyerController@buyer')->name('buyer');
+
+// VIEW ORDER ROUTE FOR THE BUYER
 Route::get('/view', 'buyerController@view')->name('view');
+Route::post('/buyers_order', 'buyerController@buyersOrder')->name('buyers.order');
+
+// VIEW ORDER ROUTE FOR THE BUYER END
+
 Route::get('/item_delivered', 'ItemDeliveredController@itemd')->name('itemd');
 Route::get('/refund_view', 'ItemDeliveredController@refview')->name('refview');
 
 // VIEW ORDER ROUTE END
 
-
+// WITHDRAWAL ROUTE BEGINS
 Route::get('/withdrawal', 'withdrawalController@withdrawal')->name('withdrawal');
+Route::post('/withdrawal_details', 'withdrawalController@withdrawalDetails')->name('withdrawal.details');
+// WITHDRAWAL ROUTE ENDS HERE
+
 Route::get('/not-recieved', 'NotRecievedController@not')->name('not');
 Route::get('/in-progress', 'InProgressController@progress')->name('progress');
 
 
-Route::get('/deposit', 'depositController@deposit')->name('deposit');
-Route::post('/confirm-deposit', 'DepositController@confirmDeposit')->name('deposit.confirm');
+
 
 Route::get('/thanks', 'ThanksController@thanks')->name('thanks');
 
@@ -108,9 +116,16 @@ Route::middleware(['auth'])->prefix('user')->group(function () {
 
 
 });
+// ROUTE FOR PLACE ORDER BEGINS
 Route::get('/place-order', 'PlaceOrderController@place')->name('place');
 Route::post('/accept_order', 'PlaceOrderController@order')->name('order');
 Route::get('/order_details/{place}', 'PlaceOrderController@orderDetails')->name('order.details');
+
+// ROUTE FOR CANCEL  ORDER BEGINS
+Route::get('/cancel-order/{place_order}', 'PlaceOrderController@cancelOrder')->name('cancel.order');
+// ROUTE FOR CANCEL  ORDER ENDS
+
+// ROUTE FOR PLACE ORDER BEGINS
 
 // Laravel 5.1.17 and above
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
@@ -122,3 +137,8 @@ Route::get('/form', 'PaymentController@show')->name('form');
 Route::post('/pay/{place}', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback'])->name('payment.callback');
 Route::get('/success', 'PaymentController@success')->name('success');
+
+// DEPOSIT PAYMENT ROUTE
+Route::get('/deposit', 'DepositController@deposit')->name('deposit');
+Route::post('/depositDetails', 'DepositController@depositDetails')->name('deposit.details');
+Route::get('/depsot/callback', 'DepositController@depositCallback')->name('deposit.callback');

@@ -30,17 +30,17 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form action="{{ route('buyer') }}" method="post" class="theme-form mega-form">
+                                    <form action="{{ route('buyers.order') }}" method="post" class="theme-form mega-form">
                                         @csrf
                                         <div class="mb-3">
-                                            <input class="form-control" name="transaction" type="text"
+                                            <input class="form-control" name="transaction_id" type="text"
                                                 placeholder="TYPE IN THE TRANSACTION ID">
                                         </div>
 
 
                                         <div class="col-12">
 
-                                          <a href="{{ route('buyer') }}">  <button class="btn btn-primary btn-block" type="button">Submit</button></a>
+                                        <button class="btn btn-primary btn-block" >Submit</button>
                                         </div>
                                     </form>
                                 </div>

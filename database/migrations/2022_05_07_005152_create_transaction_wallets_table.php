@@ -20,6 +20,7 @@ class CreateTransactionWalletsTable extends Migration
             $table->integer('transaction_type_id');
             $table->enum('status', ['pending','success','failed'])->default('pending');
             $table->boolean('is_credit');
+            $table->string('details')->nullable();
             $table->timestamps();
         });
     }

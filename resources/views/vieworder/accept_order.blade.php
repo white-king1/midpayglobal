@@ -149,7 +149,7 @@
                                                 <input type="hidden" name="email" value="{{ Auth::user()->email }}">
                                                 {{-- required --}}
                                                 <input type="hidden" name="orderID" value="345">
-                                                <input type="hidden" name="amount" value="800000"> {{-- required in kobo --}}
+                                                {{-- <input type="hidden" name="amount" value="800000"> required in kobo --}}
                                                 <input type="hidden" name="quantity" value="1">
                                                 <input type="hidden" name="currency" value="NGN">
                                                 <input type="hidden" name="metadata"
@@ -161,15 +161,21 @@
                                                     value="{{ route('payment.callback') }}">
 
                                                 <div style="text-align: right; justify-content:space-between">
-                                                    <button class="btn btn-success btn-lg btn-block" type="submit"
-                                                        value="Pay">
-                                                        <span class="spinner-border spinner-border-sm"></span> PAY
-                                                    </button>
+                                                    {{-- THIS PART SHOWS IF IT IS A SELLER IT SHOUL HAVE THE CANCEL BUTTON  ELSE BUYER SHOULD HAVE THE PAY BUTTON   --}}
+                                                    @if ($place->seller_id == Auth::user()->id)
+                                                        <a class="btn btn-danger btn-lg btn-block"
+                                                            href="{{ route('cancel.order', $place) }}">
 
-                                                    <button class="btn btn-danger btn-lg btn-block" type="reset"
-                                                        value="Cnacel">
-                                                        CANCEL
-                                                    </button>
+                                                            CANCEL
+                                                        </a>
+                                                    @else
+                                                        <button class="btn btn-success btn-lg btn-block" type="submit"
+                                                            value="Pay">
+                                                            <span class="spinner-border spinner-border-sm"></span> PAY
+                                                        </button>
+                                                    @endif
+
+
                                                 </div>
                                             </div>
                                         </div>
