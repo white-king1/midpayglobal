@@ -31,7 +31,7 @@
                                         <label class="form-label" for="exampleInputPassword27">Withdrawal Successfull</label>
                                     <h2>TAHNKS FOR YOUR PETRONAGE, <br></h2>
                                     <p>KINDLY REFER US TO YOUR FRIENDS AND FAMILY.</p>
-                                    <p><br>YOUR ACCOUNT WILL BE CREDITED WITHIN 10-15minutes.<br></p>
+                                    <p><br>YOUR LOCAL BANK ACCOUNT WILL BE CREDITED WITHIN 10-15minutes.<br></p>
 
 
                                     </div>

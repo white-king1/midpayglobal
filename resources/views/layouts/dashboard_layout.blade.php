@@ -393,7 +393,7 @@
 
                                 </li>
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('view')}}">
+                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('view.seller')}}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -413,7 +413,7 @@
 
                                 </li>
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('view')}}">
+                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('view.buyer')}}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>

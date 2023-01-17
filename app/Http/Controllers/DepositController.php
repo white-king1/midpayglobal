@@ -45,7 +45,7 @@ class DepositController extends Controller
         $deposit->status = $depositDetails['data']['status'];
         $deposit->amount = $depositDetails['data']['amount'] / 100;
         $deposit->transaction_type_id = 1;
-        
+
         // $deposit->ref_id= $reference;
         $deposit->is_credit = 1;
 
@@ -57,17 +57,4 @@ class DepositController extends Controller
         }
         return view('user.deposit');
     }
-    // public function confirmDeposit(Request $request)
-    // {
-    //     dd($request->all());
-    //     $transaction = new Transaction();
-    //     $transaction->user_id = Auth::user()->id;
-    //     $transaction->amount = $request->amount;
-    //     $transaction->quantity = $request->quantity;
-    //     $transaction->currency = $request-> currency;
-    //     $transaction->totalcost = $request->totalcost;
-    //     $transaction->status = 'pending';
-    //     $transaction->save();
-    // }
-
 }

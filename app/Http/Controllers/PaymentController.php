@@ -49,6 +49,7 @@ class PaymentController extends Controller
 
         $place = PlaceOrder::where('paystack_reference', $reference)->first();
         $place->status = 'paid';
+        $place->buyer_id = Auth::user()->id;
         $place->save();
 
         $payment=new Payment();
@@ -65,7 +66,7 @@ class PaymentController extends Controller
         }
         return view('vieworder.form');
     }
-   
+
 
 
 

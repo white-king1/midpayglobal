@@ -5,14 +5,14 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-12 col-sm-6">
-                        <h3>VIEW ORDER </h3>
+                        <h3>TRANSACTION ID </h3>
                     </div>
                     <div class="col-12 col-sm-6">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">
                                     <i data-feather="home"></i></a></li>
-                            <li class="breadcrumb-item">VIEW </li>
-                            <li class="breadcrumb-item active">ORDER</li>
+                            <li class="breadcrumb-item">TRANSACTION</li>
+                            <li class="breadcrumb-item active">ID</li>
                         </ol>
                     </div>
                 </div>

@@ -32,7 +32,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <label class="form-label" for="exampleInputPassword2">TRANSACTION ID(click here to get your<a href="{{ route('buyer') }} "> transaction id</a>)</label>
+                                            <label class="form-label" for="exampleInputPassword2">TRANSACTION ID(click here to get your<a href="{{ route('user.dashboard') }} "> transaction id</a>)</label>
                                             <input class="form-control" name="transaction id" id="exampleInputPassword2"
                                                 type="text" placeholder="type in your transaction id">
                                         </div>

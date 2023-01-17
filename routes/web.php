@@ -61,6 +61,16 @@ Route::get('/buyer', 'buyerController@buyer')->name('buyer');
 
 // VIEW ORDER ROUTE FOR THE BUYER
 Route::get('/view', 'buyerController@view')->name('view');
+// FOR SELLER BEGINS
+Route::get('/view_seller_order', 'buyerController@viewSeller')->name('view.seller');
+Route::post('/vso_details', 'buyerController@vsoDetails')->name('vso.details');
+// FOR SELLER ENDS
+
+// FOR BUYER BEGINS
+Route::get('/view_buyer_order', 'buyerController@viewBuyer')->name('view.buyer');
+Route::post('/vbo_details', 'buyerController@vboDetails')->name('vbo.details');
+// FOR BUYER ENDS
+
 Route::post('/buyers_order', 'buyerController@buyersOrder')->name('buyers.order');
 
 // VIEW ORDER ROUTE FOR THE BUYER END
@@ -107,7 +117,10 @@ Route::get('/vendor-register', 'VendorRegister@vendor')->name('vendor');
 // USERS ROUTE
 Route::middleware(['auth'])->prefix('user')->group(function () {
     Route::get('/', 'DashboardController@index')->name('user.dashboard');
+    // Route::post('/user', 'DashboardController@userUser')->name('user.user');
+
     // plan route for the user
+
     Route::get('/confirm-sub/{id}', 'YearlySubController@fetch')->name('sub');
     Route::post('/subscription/{plan}', 'YearlySubController@subscribe')->name('user.subscribe');
     Route::get('/subscription', 'YearlySubController@yerlysubCallback')->name('subscription.callback');

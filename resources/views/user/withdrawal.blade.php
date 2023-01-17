@@ -56,7 +56,7 @@
             <div class="col-xxl-8 box-col-12">
                 <div class="card">
                     <div class="card-header pb-0">
-                        <h5> ACCOUNT DETAILS</h5>
+                        <h5> ACCOUNT DETAILS (CLICK <a href="https://wa.me/2349097763224?">HERE </a>TO CHART WITH US)</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">

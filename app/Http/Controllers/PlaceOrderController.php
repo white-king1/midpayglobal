@@ -29,8 +29,11 @@ class PlaceOrderController extends Controller
         $place->charges= $charge;
         $place->total = $request->deposit + $charge;
         $place->seller_id = Auth::user()->id;
+        
+
         $place->save();
         return redirect()->route('order.details', $place);
+
     }
 
     public function orderDetails(PlaceOrder $place)
@@ -41,7 +44,7 @@ class PlaceOrderController extends Controller
 
     public function cancelOrder(PlaceOrder $place_order)
     {
-        
+
         if ($place_order->status != 'pending') {
             return back()->with(['error' => 'Order cannot be cancelled']);
         }

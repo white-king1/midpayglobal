@@ -22,7 +22,15 @@ class WithdrawalController extends Controller
         $withdraw->amount = $request->amount;
         $withdraw->transaction_type_id = 2;
         $withdraw->is_credit = 0;
-        $withdraw->save();
-        return redirect()->route('thanks', $withdraw);
+
+        if ($withdraw->save()) {
+            Auth::user()->wallet->balance -= $withdraw->amount;
+            Auth::user()->wallet->save();
+
+            return redirect()->route('thanks', $withdraw);
+        }
+        return view('user.withdrawal');
+        // $withdraw->save();
+        // return redirect()->route('thanks', $withdraw);
     }
 }

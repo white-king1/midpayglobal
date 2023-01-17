@@ -33,7 +33,9 @@
                                     <div class="mb-3">
                                         <label class="form-label" for="exampleInputPassword2">TRANSACTION ID</label>
                                         <div class="container card card-body">
-                                            <h4>{{ $place->transaction_id }}</h4>
+                                            <h4>@auth
+                                                {{ $place->transaction_id }}
+                                            @endauth</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +93,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <label class="form-label" for="exampleInputPassword2">CHARGES(5% of every
+                                            <label class="form-label" for="exampleInputPassword2">CHARGES(Non-Refundable 5% of every
                                                 deposit amount)</label>
                                             <div class="container card card-body">
                                                 <h4>₦{{ number_format($place->charges) }}</h4>
@@ -169,9 +171,9 @@
                                                             CANCEL
                                                         </a>
                                                     @else
-                                                        <button class="btn btn-success btn-lg btn-block" type="submit"
+                                                        <button class="btn btn-success btn-lg btn-block"
                                                             value="Pay">
-                                                            <span class="spinner-border spinner-border-sm"></span> PAY
+                                                            PAY
                                                         </button>
                                                     @endif
 

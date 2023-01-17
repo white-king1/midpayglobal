@@ -5,13 +5,13 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-12 col-sm-6">
-                        <h3>VIEW ORDER </h3>
+                        <h3>VIEW SELLER ORDER </h3>
                     </div>
                     <div class="col-12 col-sm-6">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">
                                     <i data-feather="home"></i></a></li>
-                            <li class="breadcrumb-item">VIEW </li>
+                            <li class="breadcrumb-item">VIEW SELLER</li>
                             <li class="breadcrumb-item active">ORDER</li>
                         </ol>
                     </div>
@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form action="{{ route('buyers.order') }}" method="post" class="theme-form mega-form">
+                                    <form action="{{ route('vso.details') }}" method="post" class="theme-form mega-form">
                                         @csrf
                                         <div class="mb-3">
                                             <input class="form-control" name="transaction_id" type="text"
