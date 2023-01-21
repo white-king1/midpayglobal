@@ -124,8 +124,8 @@
                     <ul class="nav-menus">
                         <li>
                             <div class="mode animated backOutRight">
-                                <svg class="lighticon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="lighticon" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <g>
                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -135,8 +135,8 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <svg class="darkicon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="darkicon" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z">
                                     </path>
@@ -182,10 +182,12 @@
                                             <div class="notification-img bg-light-primary"><img
                                                     src="/user_assets/images/avtar/man.png" alt=""></div>
                                             <div class="media-body">
-                                                <h5> <a class="f-14 m-0" href="user-profile.html">Allie Grater</a></h5>
+                                                <h5> <a class="f-14 m-0" href="user-profile.html">Allie Grater</a>
+                                                </h5>
                                                 <p>Lorem ipsum dolor sit amet...</p><span>10:20</span>
                                             </div>
-                                            <div class="notification-right"><a href="#"><i data-feather="x"></i></a>
+                                            <div class="notification-right"><a href="#"><i
+                                                        data-feather="x"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -197,7 +199,8 @@
                                                 <h5> <a class="f-14 m-0" href="user-profile.html">Olive Yew</a></h5>
                                                 <p>Lorem ipsum dolor sit amet...</p><span>09:20</span>
                                             </div>
-                                            <div class="notification-right"><a href="#"><i data-feather="x"></i></a>
+                                            <div class="notification-right"><a href="#"><i
+                                                        data-feather="x"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -209,7 +212,8 @@
                                                 <h5> <a class="f-14 m-0" href="user-profile.html">Peg Legge</a></h5>
                                                 <p>Lorem ipsum dolor sit amet...</p><span>07:20</span>
                                             </div>
-                                            <div class="notification-right"><a href="#"><i data-feather="x"></i></a>
+                                            <div class="notification-right"><a href="#"><i
+                                                        data-feather="x"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -221,7 +225,8 @@
                                                 <h5> <a class="f-14 m-0" href="user-profile.html">Teri Dactyl</a></h5>
                                                 <p>Lorem ipsum dolor sit amet...</p><span>05:20</span>
                                             </div>
-                                            <div class="notification-right"><a href="#"><i data-feather="x"></i></a>
+                                            <div class="notification-right"><a href="#"><i
+                                                        data-feather="x"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -258,7 +263,8 @@
                                 </svg>
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
-                                <li><a href="{{route('profile')}}"><i data-feather="user"></i><span>Profile</span></a>
+                                <li><a href="{{ route('profile') }}"><i
+                                            data-feather="user"></i><span>Profile</span></a>
                                 </li>
                                 <li><a href="email-application.html"><i data-feather="mail"></i><span>Inbox</span></a>
                                 </li>
@@ -298,9 +304,10 @@
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper">
                 <div>
-                    <div class="logo-wrapper"><a href="{{route('home')}}"><img class="img-fluid for-light"
-                                src="/user_assets/images/logo/mdnew.png" alt=""><img class="img-fluid for-dark"
-                                src="/user_assets/images/logo/mdnew.png" alt=""></a>
+                    <div class="logo-wrapper"><a href="{{ route('home') }}"><img class="img-fluid for-light"
+                                src="/user_assets/images/logo/mdnew.png" alt=""><img
+                                class="img-fluid for-dark" src="/user_assets/images/logo/mdnew.png"
+                                alt=""></a>
                         <div class="back-btn"><i class="fa fa-angle-left"></i></div>
                     </div>
                     <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
@@ -311,12 +318,12 @@
                             <ul class="sidebar-links content" id="simple-bar">
                                 <li class="back-btn"><a href="index.html"><img class="img-fluid"
                                             src="/user_assets/images/logo/mid.png" alt=""></a>
-                                    <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
-                                            aria-hidden="true"> </i></div>
+                                    <div class="mobile-back text-end"><span>Back</span><i
+                                            class="fa fa-angle-right ps-2" aria-hidden="true"> </i></div>
                                 </li>
                                 <li class="sidebar-list">
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{route('user.dashboard')}}">
+                                        href="{{ route('user.dashboard') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -333,7 +340,7 @@
                                         </svg><span>Dashboard</span></a>
                                 </li>
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('place')}}">
+                                    <a class="sidebar-link sidebar-title link-nav" href="{{ route('place') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -373,7 +380,7 @@
 
                                 </li> --}}
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('view')}}">
+                                    <a class="sidebar-link sidebar-title link-nav" href="{{ route('view') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -392,88 +399,12 @@
 
 
                                 </li>
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('view.seller')}}">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <g>
-                                                    <path d="M7.30566 14.5743H16.8987" stroke="#130F26"
-                                                        stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M2.5 7.79836C2.5 5.35646 3.75 3.25932 6.122 2.77265C8.493 2.28503 10.295 2.4536 11.792 3.26122C13.29 4.06884 12.861 5.26122 14.4 6.13646C15.94 7.01265 18.417 5.69646 20.035 7.44217C21.729 9.26979 21.72 12.0755 21.72 13.8641C21.72 20.6603 17.913 21.1993 12.11 21.1993C6.307 21.1993 2.5 20.7288 2.5 13.8641V7.79836Z"
-                                                        stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </g>
-                                            </g>
-                                        </svg><span>View Seller Order</span>
-                                    </a>
 
 
-                                </li>
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('view.buyer')}}">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <g>
-                                                    <path d="M7.30566 14.5743H16.8987" stroke="#130F26"
-                                                        stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M2.5 7.79836C2.5 5.35646 3.75 3.25932 6.122 2.77265C8.493 2.28503 10.295 2.4536 11.792 3.26122C13.29 4.06884 12.861 5.26122 14.4 6.13646C15.94 7.01265 18.417 5.69646 20.035 7.44217C21.729 9.26979 21.72 12.0755 21.72 13.8641C21.72 20.6603 17.913 21.1993 12.11 21.1993C6.307 21.1993 2.5 20.7288 2.5 13.8641V7.79836Z"
-                                                        stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </g>
-                                            </g>
-                                        </svg><span>View Buyer Order</span>
-                                    </a>
 
-
-                                </li>
-                                {{-- <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('seller')}}">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <g>
-                                                    <path d="M7.30566 14.5743H16.8987" stroke="#130F26"
-                                                        stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M2.5 7.79836C2.5 5.35646 3.75 3.25932 6.122 2.77265C8.493 2.28503 10.295 2.4536 11.792 3.26122C13.29 4.06884 12.861 5.26122 14.4 6.13646C15.94 7.01265 18.417 5.69646 20.035 7.44217C21.729 9.26979 21.72 12.0755 21.72 13.8641C21.72 20.6603 17.913 21.1993 12.11 21.1993C6.307 21.1993 2.5 20.7288 2.5 13.8641V7.79836Z"
-                                                        stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </g>
-                                            </g>
-                                        </svg><span>Update Order</span>
-                                    </a>
-
-
-                                </li> --}}
-
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="{{route('recieved')}}">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <g>
-                                                    <path d="M7.30566 14.5743H16.8987" stroke="#130F26"
-                                                        stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M2.5 7.79836C2.5 5.35646 3.75 3.25932 6.122 2.77265C8.493 2.28503 10.295 2.4536 11.792 3.26122C13.29 4.06884 12.861 5.26122 14.4 6.13646C15.94 7.01265 18.417 5.69646 20.035 7.44217C21.729 9.26979 21.72 12.0755 21.72 13.8641C21.72 20.6603 17.913 21.1993 12.11 21.1993C6.307 21.1993 2.5 20.7288 2.5 13.8641V7.79836Z"
-                                                        stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </g>
-                                            </g>
-                                        </svg><span>Recieved</span>
-                                    </a>
-                                </li>
 
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{route('withdrawal')}}">
+                                        href="{{ route('withdrawal') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -491,7 +422,7 @@
                                 </li>
 
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{route('deposit')}}">
+                                        href="{{ route('deposit') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -509,7 +440,7 @@
                                 </li>
 
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{route('recieved')}}">
+                                        href="{{ route('recieved') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -525,9 +456,25 @@
                                             </g>
                                         </svg><span>Recieved</span></a>
                                 </li>
-
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{route('refund.view')}}">
+                                        href="{{ route('report') }}">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <g>
+                                                    <path d="M7.30566 14.5743H16.8987" stroke="#130F26"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M2.5 7.79836C2.5 5.35646 3.75 3.25932 6.122 2.77265C8.493 2.28503 10.295 2.4536 11.792 3.26122C13.29 4.06884 12.861 5.26122 14.4 6.13646C15.94 7.01265 18.417 5.69646 20.035 7.44217C21.729 9.26979 21.72 12.0755 21.72 13.8641C21.72 20.6603 17.913 21.1993 12.11 21.1993C6.307 21.1993 2.5 20.7288 2.5 13.8641V7.79836Z"
+                                                        stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                            </g>
+                                        </svg><span>Report("FOR SELLERS")</span></a>
+                                </li>
+                                <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
+                                        href="{{ route('refund.view') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -542,8 +489,9 @@
                                                 </g>
                                             </g>
                                         </svg><span>Refund</span></a>
+                                </li>
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{route('refund.history')}}">
+                                        href="{{ route('refhis') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -557,7 +505,7 @@
                                                         stroke-linejoin="round"></path>
                                                 </g>
                                             </g>
-                                        </svg><span>Refund History</span></a>
+                                        </svg><span>Refund Details</span></a>
                                 </li>
                                 {{-- work on here now --}}
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
@@ -580,7 +528,7 @@
 
 
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{route('privacy')}}">
+                                        href="{{ route('privacy') }}">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -660,7 +608,8 @@
                             <div class="sidebar-img-section">
                                 <div class="sidebar-img-content"><img class="img-fluid"
                                         src="../assets/images/side-bar.png" alt="">
-                                    <h4>Need Help ?</h4><a class="txt" href="">Kindly Chart Us Up Here If You Need Any
+                                    <h4>Need Help ?</h4><a class="txt" href="">Kindly Chart Us Up Here If
+                                        You Need Any
                                         Help</a><a class="btn btn-secondary" href="https://wa.me/2349097763224?">Chart
                                         Us Up</a>
                                 </div>
@@ -680,6 +629,7 @@
         </div>
     </div>
     <!-- latest jquery-->
+
     <script src="/user_assets/js/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap js-->
     <script src="/user_assets/js/bootstrap/bootstrap.bundle.min.js"></script>
@@ -725,7 +675,6 @@
             event.preventDefault();
             $('#logout').submit();
         }
-
     </script>
 </body>
 

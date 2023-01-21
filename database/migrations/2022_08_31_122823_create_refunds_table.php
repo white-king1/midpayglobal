@@ -17,8 +17,10 @@ class CreateRefundsTable extends Migration
             $table->id();
             $table->string('user_id');
             $table->string('reason');
-            $table->string('status');
-            $table->string('reference');
+            $table->enum('status', ['pending', 'refunded', 'cancelled'])->default('pending');
+            $table->string('seller_id')->nullable();
+            $table->string('buyer_id')->nullable();
+            $table->string('transaction_id');
             $table->string('refund_id');
             $table->timestamps();
         });

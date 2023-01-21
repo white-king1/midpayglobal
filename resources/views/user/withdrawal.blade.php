@@ -85,6 +85,8 @@
                                         <input class="form-control" type="text"   name="amount" placeholder="Amount" required>
                                     </div>
 
+                                        <p> NOTE: (FOR EVERY WITHDRAWAL A CHARGE OF "N100" IS DEDUCTED)<p>
+
                                     <div class="col-12">
                                  <button class="btn btn-primary btn-block" title="">WITHDRAW</button>
                                     </div>

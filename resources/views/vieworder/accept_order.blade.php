@@ -19,6 +19,7 @@
             </div>
         </div>
         <!-- Container-fluid starts-->
+        
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
@@ -26,16 +27,34 @@
                         <div class="card-header pb-0">
                             <h5>TRANSACTION DETAILS Summary</h5>
                         </div>
-
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-3">
                                         <label class="form-label" for="exampleInputPassword2">TRANSACTION ID</label>
-                                        <div class="container card card-body">
+                                        <div class="container card card-body" id="input-icons">
                                             <h4>@auth
+
                                                 {{ $place->transaction_id }}
                                             @endauth</h4>
+                                            {{-- <button onclick="myFunction()">
+                                                <span class="material-icons" >content_copy</span>
+                                            </button> --}}
+
+                                            {{-- <script>
+                                                function myFunction(){
+                                                    var copyText =
+                                                    document.getElementById("myIput");
+                                                     copyText.select();
+                                                     copyText.setSelectionRange(0,999999);
+
+                                                     navigator.clipboard.writeText(copyText.value)
+                                                     alert("Copied the text: " + copText.value);
+                                                }
+                                            </script> --}}
+                                            {{-- <button type="button" class="copy-link-button" >
+                                                 <span class="material-icons" >content_copy</span>
+                                            </button> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -163,7 +182,7 @@
                                                     value="{{ route('payment.callback') }}">
 
                                                 <div style="text-align: right; justify-content:space-between">
-                                                    {{-- THIS PART SHOWS IF IT IS A SELLER IT SHOUL HAVE THE CANCEL BUTTON  ELSE BUYER SHOULD HAVE THE PAY BUTTON   --}}
+                                                    {{-- THIS PART SHOWS IF IT IS A SELLER IT SHOULD HAVE THE CANCEL BUTTON  ELSE BUYER SHOULD HAVE THE PAY BUTTON   --}}
                                                     @if ($place->seller_id == Auth::user()->id)
                                                         <a class="btn btn-danger btn-lg btn-block"
                                                             href="{{ route('cancel.order', $place) }}">
@@ -171,6 +190,8 @@
                                                             CANCEL
                                                         </a>
                                                     @else
+                                                    <input type = "checkbox"> I Agree To <a href="">Terms</a>  & Conditions
+
                                                         <button class="btn btn-success btn-lg btn-block"
                                                             value="Pay">
                                                             PAY

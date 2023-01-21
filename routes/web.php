@@ -40,6 +40,9 @@ Route::get('/profile', 'MyProfileController@profile')->name('profile');
 // PRIVACY AND POLICY ROUTE
 Route::get('/privacy-policy', 'PrivacyPolicyController@privacy')->name('privacy');
 
+// TERMS & CONDITION
+Route::get('/terms-condition', 'TermsConditionController@terms')->name('terms');
+
 // SUPPORT PAGE ROUTE
 Route::get('/support-page', 'SupportPageController@support')->name('support');
 
@@ -103,10 +106,22 @@ Route::get('/seller-paid', 'PaySellerController@paid')->name('paid');
 
 //BUYER REQUESTING A REFUND ROUTE
 Route::get('/refund', 'RefundController@refund')->name('refund.view');
-Route::post('/refund-id', 'RefundController@page')->name('refund.page');
+Route:: post('/refund_order', 'RefundController@reforder')->name('reforder');
+Route:: get('/refund_id', 'RefundController@refid')->name('refid');
+
+// BUYER REFUND HISTORY DETAILS
+Route:: post('/refund_view', 'RefundController@refview')->name('refview');
+Route::get('/refund_history', 'RefundController@refhis')->name('refhis');
+
+
+
+// Route::post('/refund', 'RefundController@page')->name('refund.page');
 Route::get('/refund-history', 'RefundController@history')->name('refund.history');
 Route::post('/refund_congrats', 'RefundController@refcong')->name('refcong');
 
+// SELLER SUBMITING A REPORT
+Route::get('/report', 'ReportController@report')->name('report');
+Route::post('/report_congrats', 'ReportController@reptcong')->name('reptcong');
 
 //VENDOR REGISTRATION ROUTE
 Route::get('/vendor-register', 'VendorRegister@vendor')->name('vendor');

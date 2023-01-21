@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/assets/css/swiper.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -51,6 +52,8 @@
                                         <li><a href="#about">About Us</a></li>
 
                                         <li><a href="#screen">How It Works</a></li>
+
+
                                         {{-- <li><a href="{{route('fetch'), 1}}">Rigister As A Vendor</a></li> --}}
 
                                         @guest
@@ -60,6 +63,7 @@
 
                                         @auth
                                         <li><a href="{{ route('user.dashboard') }}">My Dashboard</a></li>
+
                                         <li>
                                             <a href="javascript: void()">
                                             <form action="{{ route('logout') }} " method="post">@csrf
@@ -69,7 +73,7 @@
                                             </a>
 
                                         </li>
-                                        
+
                                         @endauth
                                     </ul>
                                 </nav>
@@ -98,7 +102,7 @@
                                 <a href="#"><img src="/assets/img/logo/mdnew.png" alt="logo"></a>
                             </div>
                             <div class="footer-text mb-20">
-                                <p>We at Midappay,we ensure safe transactions.Intrust in us with your cash and we garaunty you enjoy the worth of your cash.
+                                <p>We at Midfee Global,we ensure safe transactions.Intrust in us with your cash and we garaunty you enjoy the worth of your cash.
 
                                 </p>
                             </div>
@@ -121,7 +125,8 @@
                                     <li><a href="#">About Us</a></li>
                                     <li><a href="#">Career</a></li>
                                     <li><a href="#">Reviews</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a class="sidebar-link sidebar-title link-nav"
+                                        href="{{ route('terms') }}">Terms & Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -135,9 +140,10 @@
                                 <ul>
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Project</a></li>
-                                    <li><a href="#">Our Team</a></li>
+                                    <li><a href="#">How It Works</a></li>
+                                    <li><a href="#">Privacy & Policy</a></li>
+                                    <li><a class="sidebar-link sidebar-title link-nav"
+                                        href="{{ route('terms') }}">Terms & Condition</a></li>
                                 </ul>
                             </div>
                         </div>

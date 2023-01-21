@@ -1,16 +1,67 @@
 @extends('layouts.dashboard_layout')
 @section('content')
-    <!-- Mirrored from admin.pixelstrap.com/zeta/theme/order-history.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Mar 2022 19:44:24 GMT -->
 
 
-    <!-- Google font-->
+
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <h3>VIEW REFUND DETAILS</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">
+                                <i data-feather="home"></i></a></li>
+                        <li class="breadcrumb-item">VIEW </li>
+                        <li class="breadcrumb-item active">REFUND DETAILS</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid starts-->
+    <div class="container-fluid credit-card payment-details">
+        <div class="row">
+            <!-- Individual column searching (text inputs) Starts-->
+            <div class="col-xxl-8 box-col-12">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <h5>TRANSACTION ID</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form action="{{ route('refview') }}" method="post" class="theme-form mega-form">
+                                    @csrf
+                                    <div class="mb-3">
+                                        <input class="form-control" name="transaction_id" type="text"
+                                            placeholder="TYPE IN THE TRANSACTION ID">
+                                    </div>
 
 
-    <!-- tap on top starts-->
+                                    <div class="col-12">
 
-    <!-- tap on tap ends-->
+                                    <button class="btn btn-primary btn-block" >Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Individual column searching (text inputs) Ends-->
+            <!-- Debit Card Starts-->
+
+            <!-- EMI Ends-->
+        </div>
+    </div>
+    <!-- Container-fluid Ends-->
+</div>
     <!-- page-wrapper Start-->
-    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+    {{-- <div class="page-wrapper compact-wrapper" id="pageWrapper"> --}}
         <!-- Page Header Start-->
         </div>
         <!-- Page Header Ends                              -->
@@ -65,7 +116,7 @@
                               <td>1</td>
                               <td>
                                 <a href="{{ route('refview') }}">
-                                  
+
                                     <button class="btn btn-success" type="button">View</button>
                                 </a>
                             </td>

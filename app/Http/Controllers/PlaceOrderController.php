@@ -17,7 +17,10 @@ class PlaceOrderController extends Controller
 
     public function order(Request $request){
         $place_order = $request->transaction_id;
-        $transaction_id = Helper::IDGenerator(new PlaceOrder, 'transaction_id', 6, 'MPG');
+
+        $transaction_id = \Str::random(11);
+        
+        // Helper::IDGenerator(new PlaceOrder,'transaction_id', 6, 'MPG'. Auth::user()->id);
         $charge = 0.05*$request->deposit;
 
         $place = new PlaceOrder;
@@ -29,7 +32,7 @@ class PlaceOrderController extends Controller
         $place->charges= $charge;
         $place->total = $request->deposit + $charge;
         $place->seller_id = Auth::user()->id;
-        
+
 
         $place->save();
         return redirect()->route('order.details', $place);
@@ -53,4 +56,16 @@ class PlaceOrderController extends Controller
         $place_order->save();
         return redirect()->route('user.dashboard');
     }
+
+    // public function refund(PlaceOrder $place_order)
+    // {
+
+    //     if ($place_order->status != 'pending') {
+    //         return back()->with(['error' => 'Order cannot be refunded']);
+    //     }
+
+    //     $place_order->status = 'refunded';
+    //     $place_order->save();
+    //     return redirect()->route('user.dashboard');
+    // }
 }

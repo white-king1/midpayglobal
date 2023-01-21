@@ -34,7 +34,7 @@ class BuyerController extends Controller
     public function vsoDetails(Request $request)
     {
         $place = new PlaceOrder;
-        dd($place);
+        
         $place->transaction_id = $request->transaction_id;
         $place->description = $request->description;
         $place->period = $request->period;

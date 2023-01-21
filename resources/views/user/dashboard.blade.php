@@ -54,101 +54,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-xl-3 col-md-6 dash-xl-50">
-                <div class="card special-discount">
-                    <div class="card-body">
-                      <div class="discount-slide owl-carousel owl-theme">
-                        <div class="item">
-                          <div class="row discount-block">
-                            <div class="col-xl-7 col-lg-12 dash-xl-100">
-                              <div class="discount-detail">
-                                <div>
-                                  <h5> Special Discount <span class="font-primary f-w-500">70%OFF</span></h5>
-                                  <h3 class="m-auto">Deal of the Day from <span class="font-primary">$75</span></h3>
-                                  <ul class="timer-sec countdown">
-                                    <li>
-                                      <h6 class="font-primary m-0 days"> </h6><span class="font-dark">Days </span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 hours"> </h6><span class="font-dark">Hours</span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 minutes"> </h6><span class="font-dark">Min</span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 seconds"> </h6><span class="font-dark">Sec</span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-xl-5 col-lg-12 dash-xl-100">
-                              <div class="img-wrraper"><img class="img-fluid" src="../assets/images/dashboard-2/image.png" alt=""></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item">
-                          <div class="row discount-block">
-                            <div class="col-xl-7 col-lg-12 dash-xl-100">
-                              <div class="discount-detail">
-                                <div>
-                                  <h5> Special Discount <span class="font-primary f-w-500">70%OFF</span></h5>
-                                  <h3 class="m-auto">Deal of the Day from <span class="font-primary">$75</span></h3>
-                                  <ul class="timer-sec countdown">
-                                    <li>
-                                      <h6 class="font-primary m-0 days"> </h6><span class="font-dark">Days </span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 hours"> </h6><span class="font-dark">Hours</span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 minutes"> </h6><span class="font-dark">Min</span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 seconds"> </h6><span class="font-dark">Sec</span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-xl-5 col-lg-12 dash-xl-100">
-                              <div class="img-wrraper"><img class="img-fluid" src="../assets/images/dashboard-2/image.png" alt=""></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item">
-                          <div class="row discount-block">
-                            <div class="col-xl-7 col-lg-12 dash-xl-100">
-                              <div class="discount-detail">
-                                <div>
-                                  <h5> Special Discount <span class="font-primary f-w-500">70%OFF</span></h5>
-                                  <h3 class="m-auto">Deal of the Day from <span class="font-primary">$75</span></h3>
-                                  <ul class="timer-sec countdown">
-                                    <li>
-                                      <h6 class="font-primary m-0 days"> </h6><span class="font-dark">Days </span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 hours"> </h6><span class="font-dark">Hours</span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 minutes"> </h6><span class="font-dark">Min</span>
-                                    </li>
-                                    <li>
-                                      <h6 class="font-primary m-0 seconds"> </h6><span class="font-dark">Sec</span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-xl-5 col-lg-12 dash-xl-100">
-                              <div class="img-wrraper"><img class="img-fluid" src="../assets/images/dashboard-2/image.png" alt=""></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div> --}}
+
 
                 <div class="col-xl-4 col-md-6 dash-35 dash-xl-50">
                     <div class="card ongoing-project">
@@ -161,12 +67,12 @@
                                     <div class="icon-box-show onhover-show-div">
                                         <ul>
                                             <li> <a>
-                                                    Done</a></li>
-                                            <li> <a>
                                                     Pending</a></li>
+                                                    <li> <a>
+                                                        Paid</a></li>
                                             <li> <a>
-                                                    Rejected</a></li>
-                                            <li> <a>In Progress</a></li>
+                                                    Completed</a></li>
+                                            <li> <a>Canceled</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -187,16 +93,17 @@
                                         @foreach ($sell_orders as $place)
                                             <tr>
                                                 <td>
-                                                   {{$place->transaction_id}}
+                                                    {{ $place->transaction_id }}
                                                 </td>
                                                 <td class="img-content-box">
-                                                    <h6>{{$place->created_at}}</h6>
+                                                    <h6>{{ $place->created_at }}</h6>
                                                 </td>
                                                 <td>
-                                                    <h6>{{$place->description}}</h6><span>₦{{ number_format($place->deposit) }}</span>
+                                                    <h6>{{ $place->description }}</h6>
+                                                    <span>₦{{ number_format($place->deposit) }}</span>
                                                 </td>
                                                 <td>
-                                                    <div class="badge badge-light-primary">{{$place->status}}</div>
+                                                    <div class="badge badge-light-primary">{{ $place->status }}</div>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -219,12 +126,12 @@
                                     <div class="icon-box-show onhover-show-div">
                                         <ul>
                                             <li> <a>
-                                                    Done</a></li>
-                                            <li> <a>
                                                     Pending</a></li>
+                                                    <li> <a>
+                                                        Paid</a></li>
                                             <li> <a>
-                                                    Rejected</a></li>
-                                            <li> <a>In Progress</a></li>
+                                                    Completed</a></li>
+                                            <li> <a>Canceled</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -245,16 +152,17 @@
                                         @foreach ($buy_orders as $place)
                                             <tr>
                                                 <td>
-                                                   {{$place->transaction_id}}
+                                                    {{ $place->transaction_id }}
                                                 </td>
                                                 <td class="img-content-box">
-                                                    <h6>{{$place->created_at}}</h6>
+                                                    <h6>{{ $place->created_at }}</h6>
                                                 </td>
                                                 <td>
-                                                    <h6>{{$place->description}}</h6><span>₦{{ number_format($place->deposit) }}</span>
+                                                    <h6>{{ $place->description }}</h6>
+                                                    <span>₦{{ number_format($place->deposit) }}</span>
                                                 </td>
                                                 <td>
-                                                    <div class="badge badge-light-primary">{{$place->status}}</div>
+                                                    <div class="badge badge-light-primary">{{ $place->status }}</div>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -267,6 +175,74 @@
                 </div>
 
 
+
+                {{-- <div class="col-xl-6 col-lg-12 dash-xl-100">
+        <div class="card total-transactions">
+            <div class="row m-0">
+                <div class="col-md-6 col-sm-6 p-0">
+                    <div class="card-header card-no-border">
+                        <h5>Total Transactions</h5>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div>
+                            <div id="transaction-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 p-0 report-sec">
+                    <div class="card-header card-no-border">
+                        <div class="header-top">
+                            <h5 class="m-0">Report</h5>
+                            <div class="icon-box onhover-dropdown"><i data-feather="more-horizontal"></i>
+                                <div class="icon-box-show onhover-show-div">
+                                    <ul>
+                                        <li> <a>
+                                                Today</a></li>
+                                        <li> <a>
+                                                Yesterday</a></li>
+                                        <li> <a>
+                                                Tommorow</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col-6 report-main">
+                                <div class="report-content text-center">
+                                    <p class="font-theme-light">This Week</p>
+                                    <h5>+86.53%</h5>
+                                    <div class="progress progress-round-primary">
+                                        <div class="progress-bar" role="progressbar" style="width: 45%"
+                                            aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="report-content text-center">
+                                    <p class="font-theme-light">Last Week</p>
+                                    <h5>-34.50%</h5>
+                                    <div class="progress progress-round-secondary">
+                                        <div class="progress-bar" role="progressbar" style="width: 65%"
+                                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="media report-perfom">
+                                    <div class="media-body">
+                                        <p class="font-theme-light">Performance </p>
+                                        <h5 class="m-0">+93.82%</h5>
+                                    </div><a class="btn btn-primary" href="">New Report</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
                 <div class="col-xl-4 col-md-6 dash-31 dash-xl-50">
                     <div class="card recent-activity">
                         <div class="card-header card-no-border">
@@ -335,36 +311,6 @@
                                             <td><span class="badge badge-light-theme-light font-theme-light">3 day
                                                     ago</span></td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                        src="../assets/images/dashboard/rectangle-29.jpg" alt="">
-                                                    <div class="media-body"><a href="blog-single.html">
-                                                            <h5>Recruitment in it Department</h5>
-                                                        </a>
-                                                        <p>Technology and Indian Business News...</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-light-theme-light font-theme-light">2 hours
-                                                    ago</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                        src="../assets/images/dashboard/rectangle-28.jpg" alt="">
-                                                    <div class="media-body"><a href="blog-single.html">
-                                                            <h5>Business Project Research</h5>
-                                                        </a>
-                                                        <p>News in English: Get all Breaking...</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-light-theme-light font-theme-light">3 day
-                                                    ago</span></td>
-                                        </tr>
-
-
                             </div>
                         </div>
                     </div>
@@ -377,74 +323,7 @@
         </div>
     </div>
     </div>
-    <div class="col-xl-6 col-lg-12 dash-xl-100">
-        <div class="card total-transactions">
-            <div class="row m-0">
-                <div class="col-md-6 col-sm-6 p-0">
-                    <div class="card-header card-no-border">
-                        <h5>Total Transactions</h5>
-                    </div>
-                    <div class="card-body pt-0">
-                        <div>
-                            <div id="transaction-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 p-0 report-sec">
-                    <div class="card-header card-no-border">
-                        <div class="header-top">
-                            <h5 class="m-0">Report</h5>
-                            <div class="icon-box onhover-dropdown"><i data-feather="more-horizontal"></i>
-                                <div class="icon-box-show onhover-show-div">
-                                    <ul>
-                                        <li> <a>
-                                                Today</a></li>
-                                        <li> <a>
-                                                Yesterday</a></li>
-                                        <li> <a>
-                                                Tommorow</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body pt-0">
-                        <div class="row">
-                            <div class="col-6 report-main">
-                                <div class="report-content text-center">
-                                    <p class="font-theme-light">This Week</p>
-                                    <h5>+86.53%</h5>
-                                    <div class="progress progress-round-primary">
-                                        <div class="progress-bar" role="progressbar" style="width: 45%"
-                                            aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="report-content text-center">
-                                    <p class="font-theme-light">Last Week</p>
-                                    <h5>-34.50%</h5>
-                                    <div class="progress progress-round-secondary">
-                                        <div class="progress-bar" role="progressbar" style="width: 65%"
-                                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="media report-perfom">
-                                    <div class="media-body">
-                                        <p class="font-theme-light">Performance </p>
-                                        <h5 class="m-0">+93.82%</h5>
-                                    </div><a class="btn btn-primary" href="">New Report</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-md-6 dash-xl-50">
+    {{-- <div class="col-xl-3 col-md-6 dash-xl-50">
         <div class="card yearly-chart">
             <div class="card-header card-no-border pb-0">
                 <h5 class="pb-2">₦{{ number_format(Auth::user()->wallet->balance) }}</h5>
@@ -456,7 +335,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="col-xl-3 col-md-6 dash-xl-50">
         <div class="card bg-primary premium-access">
             <div class="card-body">
