@@ -13,6 +13,7 @@ class BuyerController extends Controller
         return view('vieworder.view');
 
     }
+    
 
     public function buyersOrder(Request $request)
     {
@@ -34,7 +35,7 @@ class BuyerController extends Controller
     public function vsoDetails(Request $request)
     {
         $place = new PlaceOrder;
-        
+
         $place->transaction_id = $request->transaction_id;
         $place->description = $request->description;
         $place->period = $request->period;

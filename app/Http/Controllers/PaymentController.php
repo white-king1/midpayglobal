@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Payment;
 use App\PlaceOrder;
+use App\User;
+use App\Wallet;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -67,8 +69,28 @@ class PaymentController extends Controller
         return view('vieworder.form');
     }
 
+// AFTER THE BUYER CLICKS ON RECIEVED IT SHOULD RETURN COMPLETED TRANSACTION
+    public function recievedOrder(  $transaction_id)
+    {
 
+        $deposit = PlaceOrder::where('transaction_id', $transaction_id)->first();
 
+        $seller = User::find($deposit->seller_id);
+
+        if ($deposit->status == 'paid') {
+
+            $wallet= Wallet::where('user_id',$seller->id)->first();
+            $wallet->increment('balance', $deposit->deposit);
+            $wallet->save();
+
+            $deposit->status = 'completed';
+            $deposit->save();
+
+            return view('vieworder.success');
+        }
+
+        return back()->with(['error' => 'Transaction cannot be updated']);
+    }
 
 
 

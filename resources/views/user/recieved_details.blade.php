@@ -37,6 +37,24 @@
 
                                                 {{ $place->transaction_id }}
                                             @endauth</h4>
+                                            {{-- <button onclick="myFunction()">
+                                                <span class="material-icons" >content_copy</span>
+                                            </button> --}}
+
+                                            {{-- <script>
+                                                function myFunction(){
+                                                    var copyText =
+                                                    document.getElementById("myIput");
+                                                     copyText.select();
+                                                     copyText.setSelectionRange(0,999999);
+
+                                                     navigator.clipboard.writeText(copyText.value)
+                                                     alert("Copied the text: " + copText.value);
+                                                }
+                                            </script> --}}
+                                            {{-- <button type="button" class="copy-link-button" >
+                                                 <span class="material-icons" >content_copy</span>
+                                            </button> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +194,7 @@
 
                                                         <button class="btn btn-success btn-lg btn-block"
                                                             value="Pay">
-                                                            PAY
+                                                            RECIEVED
                                                         </button>
                                                     @endif
 

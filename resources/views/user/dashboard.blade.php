@@ -9,8 +9,8 @@
                     </div>
                     <div class="col-12 col-sm-6">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"> <a class="home-item" href="{{ route('home') }}"><i
-                                        data-feather="home"></i></a></li>
+                            <li class="breadcrumb-item"> <a class="home-item" href="{{ route('home') }}">
+                                <i data-feather="home"></i></a></li>
                             <li class="breadcrumb-item"> Dashboard</li>
                             <li class="breadcrumb-item active"> Default</li>
                         </ol>
@@ -56,7 +56,7 @@
                 </div>
 
 
-                <div class="col-xl-4 col-md-6 dash-35 dash-xl-50">
+                <div class="col-xl-12 col-md-12 dash-50">
                     <div class="card ongoing-project">
                         <div class="card-header card-no-border">
                             <div class="media media-dashboard">
@@ -105,6 +105,7 @@
                                                 <td>
                                                     <div class="badge badge-light-primary">{{ $place->status }}</div>
                                                 </td>
+
                                             </tr>
                                         @endforeach
 
@@ -115,7 +116,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-md-6 dash-35 dash-xl-50">
+                <div class="col-xl-12 col-md-12 dash-50">
                     <div class="card ongoing-project">
                         <div class="card-header card-no-border">
                             <div class="media media-dashboard">
@@ -146,6 +147,7 @@
                                             <th> <span>Date</span></th>
                                             <th> <span>Details </span></th>
                                             <th> <span>Status </span></th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -164,7 +166,17 @@
                                                 <td>
                                                     <div class="badge badge-light-primary">{{ $place->status }}</div>
                                                 </td>
-                                            </tr>
+                                                <td>
+                                                    <form action="{{route('recieved.order', $place->transaction_id)}}" method="POST">@csrf
+
+
+                                                       @if ($place->status != 'completed')
+                                                       <button class="btn btn-success" type="submit">Recieved</button>
+                                                       @endif
+
+
+                                                </form>
+                                                </td>
                                         @endforeach
 
                                     </tbody>

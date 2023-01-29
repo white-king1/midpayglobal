@@ -96,11 +96,16 @@ Route::get('/in-progress', 'InProgressController@progress')->name('progress');
 
 Route::get('/thanks', 'ThanksController@thanks')->name('thanks');
 
-Route::get('/recieved', 'RecievedController@recieved')->name('recieved');
+// Route::get('/recieved', 'RecievedController@recieved')->name('recieved');
 
 
-
+// RECIEVED BUTTON PART
 Route::get('/pay-seller', 'PaySellerController@pay')->name('seller.pay');
+// Route::post('/recieved_order', 'RecievedController@recievedOrder')->name('recieved.order');
+// Route::post('/recieved_details', 'RecievedController@recievedDetails')->name('recieved.details');
+
+
+
 Route::get('/seller-paid', 'PaySellerController@paid')->name('paid');
 
 
@@ -156,7 +161,7 @@ Route::get('/cancel-order/{place_order}', 'PlaceOrderController@cancelOrder')->n
 // ROUTE FOR PLACE ORDER BEGINS
 
 // Laravel 5.1.17 and above
-Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+// Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 // Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
 
@@ -165,7 +170,10 @@ Route::get('/form', 'PaymentController@show')->name('form');
 Route::post('/pay/{place}', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback'])->name('payment.callback');
 Route::get('/success', 'PaymentController@success')->name('success');
+// RECIEVED PAYMENT ROUTE
+Route::post('/recieved/{transaction_id}', 'PaymentController@recievedOrder')->name('recieved.order');
 
+//RECIEVED PAYMENT ROUTE END
 // DEPOSIT PAYMENT ROUTE
 Route::get('/deposit', 'DepositController@deposit')->name('deposit');
 Route::post('/depositDetails', 'DepositController@depositDetails')->name('deposit.details');
