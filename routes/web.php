@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\http\Controller\PlaceOrderController;
+use App\Refund;
 
 /*
 |--------------------------------------------------------------------------
@@ -112,11 +113,11 @@ Route::get('/seller-paid', 'PaySellerController@paid')->name('paid');
 //BUYER REQUESTING A REFUND ROUTE
 Route::get('/refund', 'RefundController@refund')->name('refund.view');
 Route:: post('/refund_order', 'RefundController@reforder')->name('reforder');
-Route:: get('/refund_id', 'RefundController@refid')->name('refid');
+Route:: get('/refund_id/{refund}', 'RefundController@refDetails')->name('ref.details');
 
 // BUYER REFUND HISTORY DETAILS
-Route:: post('/refund_view', 'RefundController@refview')->name('refview');
 Route::get('/refund_history', 'RefundController@refhis')->name('refhis');
+Route:: post('/refund_view', 'RefundController@refview')->name('refview');
 
 
 
@@ -178,3 +179,7 @@ Route::post('/recieved/{transaction_id}', 'PaymentController@recievedOrder')->na
 Route::get('/deposit', 'DepositController@deposit')->name('deposit');
 Route::post('/depositDetails', 'DepositController@depositDetails')->name('deposit.details');
 Route::get('/depsot/callback', 'DepositController@depositCallback')->name('deposit.callback');
+
+
+// SENDING EMAIL TO THE SELLER AFTER ITEM IS RECIEVED BY A BUYER
+// Route::post('/mail/{price}','MailController@purchaseDetails')->name('purchase.details');

@@ -51,7 +51,7 @@
 
 
                                     <div class="card-footer text-end">
-                                             <a href="{{ route('refcong') }}">  <button class="btn btn-primary">Refund</button></a>
+                                               <button class="btn btn-primary">Refund</button>
                                         <input class="btn btn-light" type="reset" value="Cancel">
                                     </div>
                                 </div>

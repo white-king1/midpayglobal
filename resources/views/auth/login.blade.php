@@ -1,6 +1,7 @@
-@extends('layouts.auth')
-
+@extends('layouts.app')
 @section('content')
+<br>
+<br>
 <div class="card">
     <div class="card-header">{{ __('Login') }}</div>
 
@@ -69,4 +70,6 @@
         </form>
     </div>
 </div>
+<br>
+<br>
 @endsection

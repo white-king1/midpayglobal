@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PaymentMaid;
+use App\Mail\PurchaseDetails;
 use App\Payment;
 use App\PlaceOrder;
 use App\User;
@@ -9,6 +11,7 @@ use App\Wallet;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Paystack;
 
@@ -38,6 +41,11 @@ class PaymentController extends Controller
         }catch(\Exception $e) {
             return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
         }
+
+        $u = User::where('id',$place_id->id)->first();
+        Mail::to($u->email)->send(new PaymentMaid($placeOrder));
+
+
     }
 
     /**
@@ -85,6 +93,9 @@ class PaymentController extends Controller
 
             $deposit->status = 'completed';
             $deposit->save();
+
+            Mail::to($seller->email)->send(new PurchaseDetails($deposit));
+
 
             return view('vieworder.success');
         }

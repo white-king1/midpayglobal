@@ -92,4 +92,5 @@
             </div>
             <!-- Container-fluid Ends-->
         </div>
-    @endsection
+    </div>
+@endsection

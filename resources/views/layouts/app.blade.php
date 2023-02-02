@@ -31,7 +31,7 @@
 
 <body>
     <!-- header -->
-    <header class="header-area">
+    <header class="header-area" style="background-color: #190a32;">
         <div id="header-sticky" class="menu-area">
             <div class="container">
                 <div class="second-menu">
