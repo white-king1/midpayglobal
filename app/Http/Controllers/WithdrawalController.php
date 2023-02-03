@@ -24,12 +24,19 @@ class WithdrawalController extends Controller
         $withdraw->is_credit = 0;
 
         if ($withdraw->save()) {
-            Auth::user()->wallet->balance -= $withdraw->amount+100;
-            Auth::user()->wallet->save();
 
-            return redirect()->route('thanks', $withdraw);
+            if(Auth::user()->wallet->balance <= $withdraw->amount+100){
+                return redirect()->route('insufficient', $withdraw);
+            }else {
+                Auth::user()->wallet->balance -= $withdraw->amount+100;
+                Auth::user()->wallet->save();
+                return view('user.thanks');
+
+            }
+
+
         }
-        return view('user.withdrawal');
+
         // $withdraw->save();
         // return redirect()->route('thanks', $withdraw);
     }

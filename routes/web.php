@@ -96,6 +96,7 @@ Route::get('/in-progress', 'InProgressController@progress')->name('progress');
 
 
 Route::get('/thanks', 'ThanksController@thanks')->name('thanks');
+Route::get('/insufficient_funds', 'ThanksController@insufficientFunds')->name('insufficient');
 
 // Route::get('/recieved', 'RecievedController@recieved')->name('recieved');
 

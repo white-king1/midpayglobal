@@ -10,4 +10,9 @@ class ThanksController extends Controller
     {
         return view('user.thanks');
     }
+
+    public function insufficientFunds()
+    {
+        return view ('user.insufficient');
+    }
 }

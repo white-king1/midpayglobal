@@ -10,7 +10,7 @@
                     <div class="col-12 col-sm-6">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"> <a class="home-item" href="{{ route('home') }}">
-                                <i data-feather="home"></i></a></li>
+                                    <i data-feather="home"></i></a></li>
                             <li class="breadcrumb-item"> Dashboard</li>
                             <li class="breadcrumb-item active"> Default</li>
                         </ol>
@@ -21,7 +21,7 @@
         <!-- Container-fluid starts-->
         <div class="container-fluid default-dash">
             <div class="row">
-                <div class="col-xl-6 col-md-6 dash-xl-50">
+                <div class="col-xl-12 col-md-12 ">
                     <div class="card profile-greeting">
                         <div class="card-body">
                             <div class="media">
@@ -30,7 +30,11 @@
                                         <h1> {{ Auth::user()->name }}</h1>
                                         <p>Your dashboard is ready!</p>
                                         <br>
+                                        <br>
                                         <h5>Available Balance: ₦{{ number_format(Auth::user()->wallet->balance) }}</h5>
+                                        <br>
+                                        <h5>Pending Balance: ₦{{ number_format(Auth::user()->wallet->pending_balance) }}
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
@@ -39,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 dash-xl-50">
+                {{-- <div class="col-xl-3 col-md-6 dash-xl-50">
                     <div class="card pb-0 o-hidden earning-card">
                         <div class="card-header earning-back"></div>
                         <div class="card-body p-0">
@@ -53,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
 
                 <div class="col-xl-12 col-md-12 dash-50">
@@ -68,8 +72,8 @@
                                         <ul>
                                             <li> <a>
                                                     Pending</a></li>
-                                                    <li> <a>
-                                                        Paid</a></li>
+                                            <li> <a>
+                                                    Paid</a></li>
                                             <li> <a>
                                                     Completed</a></li>
                                             <li> <a>Canceled</a></li>
@@ -128,8 +132,8 @@
                                         <ul>
                                             <li> <a>
                                                     Pending</a></li>
-                                                    <li> <a>
-                                                        Paid</a></li>
+                                            <li> <a>
+                                                    Paid</a></li>
                                             <li> <a>
                                                     Completed</a></li>
                                             <li> <a>Canceled</a></li>
@@ -167,15 +171,16 @@
                                                     <div class="badge badge-light-primary">{{ $place->status }}</div>
                                                 </td>
                                                 <td>
-                                                    <form action="{{route('recieved.order', $place->transaction_id)}}" method="POST">@csrf
+                                                    <form action="{{ route('recieved.order', $place->transaction_id) }}"
+                                                        method="POST">@csrf
 
 
-                                                       @if ($place->status != 'completed')
-                                                       <button class="btn btn-success" type="submit">Recieved</button>
-                                                       @endif
+                                                        @if ($place->status != 'completed')
+                                                            <button class="btn btn-success" type="submit">Recieved</button>
+                                                        @endif
 
 
-                                                </form>
+                                                    </form>
                                                 </td>
                                         @endforeach
 
