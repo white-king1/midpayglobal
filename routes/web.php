@@ -16,15 +16,76 @@ use App\Refund;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes([]);
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::get('/', 'HomeController@index')->name('home');
 
-Auth::routes();
 
+// ADMIN ROUTE STARTS HERE
+Route::middleware(['auth'])->prefix('admin')->group(function (){
+
+    // ADMIN ROUTE STARTS HERE
 Route::get('/dashboard', 'HomeController@redirect')->name('redirect');
 Route::get('/admin-dashboard', 'AdminDashboardController@admin')->name('admin');
+
+Route::get('/all_users', 'AllusersController@allUsers')->name('all.users');
+Route::get('/all_deposits', 'AlldepositsController@allDeposits')->name('all.deposits');
+Route::get('/all_withdrawals', 'AllwithdrawalsController@allWithdrawals')->name('all.withdrawals');
+Route::get('/all_refunds', 'AllrefundsController@allRefunds')->name('all.refunds');
+Route::get('/all_reports', 'AllreportsController@allReports')->name('all.reports');
+
+
+
+
+// ADMIN ROUTE ENDS HERE
+
+});
+
+
+
+
+
+// USERS ROUTE
+Route::middleware(['auth'])->prefix('user')->group(function () {
+    Route::get('/', 'DashboardController@index')->name('user.dashboard');
+
+// ROUTE FOR PLACE ORDER BEGINS
+Route::get('/place-order', 'PlaceOrderController@place')->name('place');
+Route::post('/accept_order', 'PlaceOrderController@order')->name('order');
+Route::get('/order_details/{place}', 'PlaceOrderController@orderDetails')->name('order.details');
+
+// ROUTE FOR CANCEL  ORDER BEGINS
+Route::get('/cancel-order/{place_order}', 'PlaceOrderController@cancelOrder')->name('cancel.order');
+// ROUTE FOR CANCEL  ORDER ENDS
+
+// ROUTE FOR PLACE ORDER BEGINS
+
+// Laravel 5.1.17 and above
+// Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+// Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
+
+
+// PAYSTACK PAYMENT ROUTE
+Route::get('/form', 'PaymentController@show')->name('form');
+Route::post('/pay/{place}', 'PaymentController@redirectToGateway')->name('pay');
+Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback'])->name('payment.callback');
+Route::get('/success', 'PaymentController@success')->name('success');
+// RECIEVED PAYMENT ROUTE
+Route::post('/recieved/{transaction_id}', 'PaymentController@recievedOrder')->name('recieved.order');
+
+//RECIEVED PAYMENT ROUTE END
+// DEPOSIT PAYMENT ROUTE
+Route::get('/deposit', 'DepositController@deposit')->name('deposit');
+Route::post('/depositDetails', 'DepositController@depositDetails')->name('deposit.details');
+Route::get('/depsot/callback', 'DepositController@depositCallback')->name('deposit.callback');
+
 
 // PLan subscription Route For the Admin
 Route::get('/plan', 'PlanController@show')->name('show');
@@ -136,51 +197,7 @@ Route::get('/vendor-register', 'VendorRegister@vendor')->name('vendor');
 
 
 
-// USERS ROUTE
-Route::middleware(['auth'])->prefix('user')->group(function () {
-    Route::get('/', 'DashboardController@index')->name('user.dashboard');
-    // Route::post('/user', 'DashboardController@userUser')->name('user.user');
-
-    // plan route for the user
-
-    Route::get('/confirm-sub/{id}', 'YearlySubController@fetch')->name('sub');
-    Route::post('/subscription/{plan}', 'YearlySubController@subscribe')->name('user.subscribe');
-    Route::get('/subscription', 'YearlySubController@yerlysubCallback')->name('subscription.callback');
-
-
-
-
-});
-// ROUTE FOR PLACE ORDER BEGINS
-Route::get('/place-order', 'PlaceOrderController@place')->name('place');
-Route::post('/accept_order', 'PlaceOrderController@order')->name('order');
-Route::get('/order_details/{place}', 'PlaceOrderController@orderDetails')->name('order.details');
-
-// ROUTE FOR CANCEL  ORDER BEGINS
-Route::get('/cancel-order/{place_order}', 'PlaceOrderController@cancelOrder')->name('cancel.order');
-// ROUTE FOR CANCEL  ORDER ENDS
-
-// ROUTE FOR PLACE ORDER BEGINS
-
-// Laravel 5.1.17 and above
-// Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
-// Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
-
-
-// PAYSTACK PAYMENT ROUTE
-Route::get('/form', 'PaymentController@show')->name('form');
-Route::post('/pay/{place}', 'PaymentController@redirectToGateway')->name('pay');
-Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback'])->name('payment.callback');
-Route::get('/success', 'PaymentController@success')->name('success');
-// RECIEVED PAYMENT ROUTE
-Route::post('/recieved/{transaction_id}', 'PaymentController@recievedOrder')->name('recieved.order');
-
-//RECIEVED PAYMENT ROUTE END
-// DEPOSIT PAYMENT ROUTE
-Route::get('/deposit', 'DepositController@deposit')->name('deposit');
-Route::post('/depositDetails', 'DepositController@depositDetails')->name('deposit.details');
-Route::get('/depsot/callback', 'DepositController@depositCallback')->name('deposit.callback');
-
-
 // SENDING EMAIL TO THE SELLER AFTER ITEM IS RECIEVED BY A BUYER
 // Route::post('/mail/{price}','MailController@purchaseDetails')->name('purchase.details');
+
+});

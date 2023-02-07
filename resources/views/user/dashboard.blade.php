@@ -58,8 +58,6 @@
                         </div>
                     </div>
                 </div> --}}
-
-
                 <div class="col-xl-12 col-md-12 dash-50">
                     <div class="card ongoing-project">
                         <div class="card-header card-no-border">

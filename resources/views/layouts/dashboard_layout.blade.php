@@ -439,9 +439,9 @@
                                         </svg><span>Deposit</span></a>
                                 </li>
 
-                                
+
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{ route('report') }}">
+                                    href="https://wa.me/2349097763224?">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -455,7 +455,7 @@
                                                         stroke-linejoin="round"></path>
                                                 </g>
                                             </g>
-                                        </svg><span>Report("FOR SELLERS")</span></a>
+                                        </svg><span>Report a transaction</span></a>
                                 </li>
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
                                         href="{{ route('refund.view') }}">

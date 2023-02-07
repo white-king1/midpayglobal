@@ -19,15 +19,5 @@ class DashboardController extends Controller
         return view('user.dashboard', compact('sell_orders','buy_orders'));
     }
 
-    // public function userUser(Request $request){
-
-
-    //     $index=  new PlaceOrder();
-    //     $index->transaction_id = $request->transaction_id;
-    //     $index->description = $request->description;
-    //     $index->status = $request->status;
-    //     $index->save();
-    //     return redirect()->route('user.user', $index);
-
-    // }
+    
 }

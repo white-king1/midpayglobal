@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div>
     <section class="features-area ptb-100">

@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Midpay Global-Landing Page </title>
+    <title>Midfee Global-Landing Page </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shorBtcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
