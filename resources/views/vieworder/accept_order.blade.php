@@ -19,6 +19,13 @@
             </div>
         </div>
         <!-- Container-fluid starts-->
+        @if (Session::has('flash_message'))
+        <center>
+            <div class="alert {{ Session::get('flash_type') }} col-md-4">
+                <h6>{{ Session::get('flash_message') }}</h6>
+            </div>
+        </center>
+    @endif
 
         <div class="container-fluid">
             <div class="row">
@@ -49,7 +56,6 @@
                                         <div class="container card card-body">
                                             <h4>{{ $place->description }}</h4>
                                         </div>
-
                                     </div>
                                 </div>
 
@@ -178,6 +184,11 @@
                                                             value="Pay">
                                                             PAY
                                                         </button>
+
+                                                        <a href="{{route('wallet.pay',$place)}}" class="btn btn-success btn-lg btn-block"
+                                                            value="Pay">
+                                                            PAY FROM WALLET
+                                                    </a>
                                                     @endif
 
 

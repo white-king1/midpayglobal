@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Mail\RefundDetails;
 use App\PlaceOrder;
 use App\Refund;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class RefundController extends Controller
 {
@@ -19,10 +23,12 @@ class RefundController extends Controller
 
     public function refView(Refund $refund)
     {
-        $buy_orders = Refund::where('buyer_id', Auth::user()->id)->latest()->take(3)->get(); //Only orders that have the user id as the auth user id
 
 
-        return view('vieworder.refund_view', compact('buy_orders', 'refund'));
+        $here_refunds = Refund::all(); //Only orders that have the user id as the auth user id
+
+
+        return view('vieworder.refund_view', compact('here_refunds', 'refund'));
     }
 
     public function reforder(Request $request)
@@ -46,13 +52,19 @@ class RefundController extends Controller
         $refund = new Refund;
         $refund->refund_id = $refundid;
         $refund->transaction_id = $request->transaction_id;
+        $refund->user_id = $request->user()->id;
         $refund->reason = $request->reason;
         $refund->buyer_id = Auth::user()->id;
         // $refund->buyer_id = Auth::user()->id;
         // $refund->status = $request->status;
 
         $refund->save();
-        return redirect()->route('ref.details', $refund);
+
+
+      Mail::to('midfeeglobal@gmail.com')->send(new RefundDetails($refund));
+
+        return redirect()->route('ref.details', $refund)->with('flash_message', 'A Refund has been initiated .')
+        ->with('flash_type', 'alert-success');
     }
 
     public function refDetails(Refund $refund)
@@ -62,8 +74,6 @@ class RefundController extends Controller
 
     public function refhis()
     {
-
-
         return view('user.refund_history');
     }
 }

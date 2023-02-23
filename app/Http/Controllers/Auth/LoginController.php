@@ -40,6 +40,6 @@ class LoginController extends Controller
     }
     protected function loggedOut()
     {
-        return view('auth.login');
+        return redirect()->route('login');
     }
 }

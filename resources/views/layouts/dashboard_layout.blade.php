@@ -12,9 +12,7 @@
     <meta name="keywords"
         content="admin template, Zeta admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="/user_assets/images/logo/favicon-icon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="/user_assets/images/logo/favicon-icon.png" type="image/x-icon">
-    <title>Midappay user dashboard </title>
+    <title>Midfee user dashboard </title>
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -47,6 +45,12 @@
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="/user_assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/midappaynew.css">
+
+     {{-- PLACE FAVICON ICON BELLOW HERE --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -71,8 +75,11 @@
         <div class="page-header">
             <div class="header-wrapper row m-0">
                 <div class="header-logo-wrapper col-auto p-0">
-                    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid"
-                                src="/user_assets/images/logo/logo.png" alt=""></a></div>
+                    <div class="logo-wrapper">
+                        <a href="index.html">
+                            <img class="img-fluid" src="/assets/images/Black png.png" alt="logo" />
+                        </a>
+                    </div>
                     <div class="toggle-sidebar">
                         <div class="status_toggle sidebar-toggle d-flex">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -304,20 +311,25 @@
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper">
                 <div>
-                    <div class="logo-wrapper"><a href="{{ route('home') }}"><img class="img-fluid for-light"
-                                src="/user_assets/images/logo/mdnew.png" alt=""><img
-                                class="img-fluid for-dark" src="/user_assets/images/logo/mdnew.png"
-                                alt=""></a>
+                    <div class="logo-wrapper">
+                        <a href="{{ route('home') }}">
+                            <img class="img-fluid" src="/assets/images/Black png.png" alt="logo" /></a>
+                        </a>
                         <div class="back-btn"><i class="fa fa-angle-left"></i></div>
                     </div>
-                    <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
-                                src="/user_assets/images/logo/mid.png" alt=""></a></div>
+                    <div class="logo-icon-wrapper">
+                        <a href="">
+                            <img class="img-fluid" src="/assets/images/Black png.png" alt="logo" /></a>
+                        </a>
+                    </div>
                     <nav class="sidebar-main">
                         <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
                         <div id="sidebar-menu" class="scroll scroll5">
                             <ul class="sidebar-links content" id="simple-bar">
-                                <li class="back-btn"><a href="index.html"><img class="img-fluid"
-                                            src="/user_assets/images/logo/mid.png" alt=""></a>
+                                <li class="back-btn">
+                                    <a href="">
+                                        <img class="img-fluid" src="/assets/images/Black png.png" alt="logo" /></a>
+                                    </a>
                                     <div class="mobile-back text-end"><span>Back</span><i
                                             class="fa fa-angle-right ps-2" aria-hidden="true"> </i></div>
                                 </li>
@@ -441,7 +453,7 @@
 
 
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                    href="https://wa.me/2349097763224?">
+                                        href="https://wa.me/2349097763224?">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g>

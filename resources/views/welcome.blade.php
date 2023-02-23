@@ -29,8 +29,9 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <img src="/assets/img/bg/mobile.png" alt="shape" class="s-img">
+                    <div class="col-lg-6" style="margin-top:10%;">
+                        {{-- <img src="/assets/img/bg/mobile.png" alt="shape" class="s-img"> --}}
+                        <img  class="img-fluid" src="assets/images/Iphone X slant.png" alt="shape" class="s-img">
                     </div>
                 </div>
 
@@ -333,7 +334,7 @@
                                         <img src="/assets/img/testimonial/malen2.jpg" alt="/assets/img">
                                         <div class="ta-info">
                                             <h6>Mr Jamal Ndubusis</h6>
-                                            <span>Author</span>
+                                            <span>Enterprenuer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
@@ -347,9 +348,10 @@
                                 <div class="single-testimonial">
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/femalen3.jpg" alt="/assets/img">
+                                        <br>
                                         <div class="ta-info">
                                             <h6>Miss Joan Eze</h6>
-                                            <span>Author</span>
+                                            <span>Importer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
@@ -365,15 +367,16 @@
                                 <div class="single-testimonial">
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/malen3.jpg" alt="/assets/img">
+                                        <br>
                                         <div class="ta-info">
                                             <h6>Mr Judge Amadi</h6>
-                                            <span>Web Developer</span>
+                                            <span>Enterprenuer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
                                     </div>
                                     <br>
-                                    <p>Eve after much delays,i was refunded after 3 business days.</p>
+                                    <p>Even after much delays,i was refunded after 3 business days.</p>
 
                                 </div>
                             </div>
@@ -381,15 +384,16 @@
                                 <div class="single-testimonial">
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/femalen1.jpg" alt="/assets/img">
+                                        <br>
                                         <div class="ta-info">
                                             <h6>Miss Helen Okoro</h6>
-                                            <span>Web Developer</span>
+                                            <span>Online Enterprenuer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
                                     </div>
                                     <br>
-                                    <p>No Stress,straight precise and i got paid</p>
+                                    <p>No Stress,straight, precise and i got paid</p>
 
                                 </div>
                             </div>
@@ -397,9 +401,11 @@
                                 <div class="single-testimonial">
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/malen1.jpg" alt="/assets/img">
+                                        <br>
+                                        <br>
                                         <div class="ta-info">
                                             <h6>Mr Victory Omo</h6>
-                                            <span>Web Developer</span>
+                                            <span>Importer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">

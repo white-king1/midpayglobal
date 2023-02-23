@@ -15,4 +15,9 @@ class ThanksController extends Controller
     {
         return view ('user.insufficient');
     }
+
+    public function insufPayfunds()
+    {
+        return view ('user.insuf_payfunds');
+    }
 }

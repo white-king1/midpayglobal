@@ -6,6 +6,7 @@ use App\Mail\PaymentMaid;
 use App\Mail\PurchaseDetails;
 use App\Payment;
 use App\PlaceOrder;
+use App\Transaction;
 use App\User;
 use App\Wallet;
 use Facade\FlareClient\View;
@@ -44,6 +45,8 @@ class PaymentController extends Controller
 
         $u = User::where('id',$place_id->id)->first();
         Mail::to($u->email)->send(new PaymentMaid($placeOrder));
+
+
 
 
     }
@@ -101,6 +104,27 @@ class PaymentController extends Controller
         }
 
         return back()->with(['error' => 'Transaction cannot be updated']);
+    }
+
+    // PAY FROM WALLET
+    public function walletPay(Request $request, $place_id)
+    {
+        $place= PlaceOrder::find($place_id);
+        $place->save();
+
+        if(Auth::user()->wallet->balance <= $place->deposit + 0.05 * $place->deposit){
+
+           return redirect()->route('insufpay.funds', $place);
+
+        }else{
+           $money = $place->deposit;
+           dd($placeOrder);
+           $add= PlaceOrder::find('buyer_id',$place->seller_id)-> increment ( Auth::user()->wallet->balance,$money);
+
+           $minus = PlaceOrder::find('buyer_id')-> decrement (Auth::user()->wallet->balance,$money);
+        }
+        return view('vieworder.success');
+
     }
 
 

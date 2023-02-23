@@ -23,26 +23,30 @@
                       <th>Name</th>
                       <th>Email</th>
                       <th>Phone Number</th>
-                      <th>Balance</th>
-                      <th>Date Registered</th>
+                      <th>Withdrawl_Amount</th>
+                      <th>Details</th>
+                      <th>Date</th>
 
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach ($all_withdrawals as $withdraw)
                     <tr>
-
-
-                      <td>Kelechi Ndubuisi</td>
-                      <td>kelechivictorn@gmail.com</td>
-                      <td>09065729839</td>
-                      <td>N3200</td>
-                      <td>2012/08/03</td>
+                      <td>{{ $withdraw->user->name}}</td>
+                      <td>{{ $withdraw->user->email}}</td>
+                      <td>{{ $withdraw->user->phone}}</td>
+                      <td>N{{number_format($withdraw->amount)}}</td>
                       <td>
-                        <label class="badge badge-info">Restrict</label>
+                        {{($withdraw->details)}}
                       </td>
+                      <td>{{($withdraw->created_at)}}</td>
+
                       <td>
-                        <button class="btn btn-outline-danger">Delete</button>
-                      </td>
+                        @if ($withdraw->status != 'success')
+                        <a href="{{route('paid.withdrawals',$withdraw->id)}}" class="btn btn-success" type="submit">Paid</a>
+                        @endif
+                    </td>
+                      @endforeach
                     </tr>
                   </tbody>
                 </table>

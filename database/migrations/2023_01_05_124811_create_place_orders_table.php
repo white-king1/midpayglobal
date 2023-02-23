@@ -15,6 +15,7 @@ class CreatePlaceOrdersTable extends Migration
     {
         Schema::create('place_orders', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('transaction_id')->nullable();
             $table->string('paystack_reference')->nullable();
             $table->string('description');

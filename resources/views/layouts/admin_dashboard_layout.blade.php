@@ -7,7 +7,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Midfee Global Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="/admin-assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/admin-assets/vendors/css/vendor.bundle.base.css">
@@ -24,6 +24,11 @@
     <link rel="stylesheet" href="/admin-assets/css/modern-vertical/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="/admin-assets/images/favicon.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -50,11 +55,11 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
 
-                <a class="sidebar-brand brand-logo" href="{{ route('home') }}"><img
-                        src="admin-assets/images/midappay logo.png" alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="index.html"><img
-                        src="https://www.bootstrapdash.com/demo/corona/jquery/template/admin-assets/images/midappay logo.png"
-                        alt="logo" /></a>
+                <a class="sidebar-brand brand-logo" href="{{ route('home') }}">
+                    <img class="img-fluid" src="/assets/images/Black png.png" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html">
+            <img  class="img-fluid" src="/assets/images/Black png.png"alt="logo" />
+                    </a>
             </div>
             <ul class="nav">
                 <li class="nav-item profile">
@@ -153,6 +158,33 @@
                             <i class="mdi mdi-speedometer"></i>
                         </span>
                         <span class="menu-title">Refunds</span>
+                    </a>
+                </li>
+                <br>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="{{ route('all.paidorders') }}">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Paid Orders</span>
+                    </a>
+                </li>
+                <br>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="{{ route('all.placeorders') }}">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Placed Orders</span>
+                    </a>
+                </li>
+                <br>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="{{ route('all.charges') }}">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">All Charges</span>
                     </a>
                 </li>
                 <br>

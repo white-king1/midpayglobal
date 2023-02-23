@@ -19,12 +19,13 @@ class PlaceOrderController extends Controller
         $place_order = $request->transaction_id;
 
         $transaction_id = \Str::random(11);
-        
+
         // Helper::IDGenerator(new PlaceOrder,'transaction_id', 6, 'MPG'. Auth::user()->id);
         $charge = 0.05*$request->deposit;
 
         $place = new PlaceOrder;
         $place->transaction_id = $transaction_id;
+        $place->user_id = Auth::user()->id;
         $place->description = $request->description;
         $place->period = $request->period;
         $place->quantity = $request->quantity;
@@ -35,7 +36,8 @@ class PlaceOrderController extends Controller
 
 
         $place->save();
-        return redirect()->route('order.details', $place);
+        return redirect()->route('order.details', $place)->with('flash_message', 'You have successfully Placed an Order..')
+        ->with('flash_type', 'alert-success');
 
     }
 
@@ -54,7 +56,8 @@ class PlaceOrderController extends Controller
 
         $place_order->status = 'cancelled';
         $place_order->save();
-        return redirect()->route('user.dashboard');
+        return redirect()->route('user.dashboard')->with('flash_message', 'You have Canceled an Order..')
+        ->with('flash_type', 'alert-success');;
     }
 
     // public function refund(PlaceOrder $place_order)

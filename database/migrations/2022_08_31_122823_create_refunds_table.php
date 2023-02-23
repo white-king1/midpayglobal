@@ -15,6 +15,7 @@ class CreateRefundsTable extends Migration
     {
         Schema::create('refunds', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('reason');
             $table->enum('status', ['pending', 'refunded', 'cancelled'])->default('pending');
             $table->string('seller_id')->nullable();

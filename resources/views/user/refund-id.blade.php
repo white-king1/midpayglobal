@@ -18,6 +18,13 @@
                 </div>
             </div>
         </div>
+        @if (Session::has('flash_message'))
+        <center>
+            <div class="alert {{ Session::get('flash_type') }} col-md-4">
+                <h6>{{ Session::get('flash_message') }}</h6>
+            </div>
+        </center>
+    @endif
         <!-- Container-fluid starts-->
         <div class="container-fluid">
             <div class="row">

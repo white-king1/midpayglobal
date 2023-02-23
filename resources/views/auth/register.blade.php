@@ -628,7 +628,7 @@
 
                         <div class="col-md-8 ">
                             <p>ALREADY HAVE AN ACCOUNT
-                                <a href="{{ route('login') }}"><strong>LOGIN HERE</strong></a>
+                                <a href="{{ route('login') }}"><strong>LOGIN</strong></a>
                             </p>
                         </div>
                     </div>

@@ -52,8 +52,9 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($buy_orders as $refund)
+                                        @foreach ($here_refunds as $refund)
                                             <tr>
+                                                
                                                 <td>
                                                     {{ $refund->refund_id }}
                                                 </td>

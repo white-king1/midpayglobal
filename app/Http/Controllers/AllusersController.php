@@ -13,4 +13,11 @@ class AllusersController extends Controller
         $all_users = User::latest()->get();
         return view ('user.all_users', compact('all_users'));
     }
+
+    public function deleteUsers($id)
+    {
+          $user = User::find($id);
+          $user->delete();
+          return redirect()->route('all.users');
+    }
 }

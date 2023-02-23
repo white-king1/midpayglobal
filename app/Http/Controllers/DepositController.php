@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\DepositDetails;
 use App\Transaction;
 use App\TransactionWallet;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Unicodeveloper\Paystack\Facades\Paystack;
 
@@ -53,6 +56,9 @@ class DepositController extends Controller
             Auth::user()->wallet->balance += $deposit->amount;
             Auth::user()->wallet->save();
 
+            $dep = User::where('id',Auth::user()->id)->first();
+            Mail::to($dep->email)->send(new DepositDetails($deposit));
+            
             return view('vieworder.success');
         }
         return view('user.deposit');

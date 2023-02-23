@@ -20,10 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// ADD 'verify' => true INSIDE AUTH::ROTES([]) BELOW
 Auth::routes([]);
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/dashboard', 'HomeController@redirect')->name('redirect');
 
 
 
@@ -32,13 +33,44 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['auth'])->prefix('admin')->group(function (){
 
     // ADMIN ROUTE STARTS HERE
-Route::get('/dashboard', 'HomeController@redirect')->name('redirect');
+
 Route::get('/admin-dashboard', 'AdminDashboardController@admin')->name('admin');
 
+ // ADMIN->USERS NAV-BAR
+//  ALL USERS
 Route::get('/all_users', 'AllusersController@allUsers')->name('all.users');
+// TO DELETE A USER FROM THE USER TABLE
+Route::get('/delete_users/{id}', 'AllusersController@deleteUsers')->name('delete.users');
+
+// ALL DEPOSITS
 Route::get('/all_deposits', 'AlldepositsController@allDeposits')->name('all.deposits');
+// TO VIEW ALL THE DEPOSITS ON THE ADMIN DASHBOARD
+Route::get('/paid_deposits/{id}', 'AlldepositsController@paidDeposits')->name('paid.deposits');
+
+// ALL WITHDRAWALS
 Route::get('/all_withdrawals', 'AllwithdrawalsController@allWithdrawals')->name('all.withdrawals');
+// TO VIEW ALL THE WITHDRAWALS ON THE ADMIN DASHBOARD
+Route::get('/paid_withdrawals/{id}', 'AllwithdrawalsController@paidWithdrawals')->name('paid.withdrawals');
+
+// ALL REFUNDS
 Route::get('/all_refunds', 'AllrefundsController@allRefunds')->name('all.refunds');
+// TO VIEW ALL THE REFUNDS ON THE ADMIN DASHBOARD
+Route::get('/paid_refunds/{id}', 'AllrefundsController@paidRefunds')->name('paid.refunds');
+
+// ALL PAID ORDERS
+Route::get('/all_paidorders', 'AllPaidOrdersController@allPaidorders')->name('all.paidorders');
+// TO VIEW ALL PAID ORDERS ON THE ADMIN DASHBOARD
+Route::get('/paid_orders/{id}', 'AllPaidOrdersController@paidOrders')->name('paid.orders');
+
+// ALL PLACED ORDERS
+Route::get('/all_placedorders', 'AllPlacedOrdersController@allPLacedorders')->name('all.placeorders');
+// TO VIEW ALL PAID ORDERS ON THE ADMIN DASHBOARD
+Route::get('/show_placedorders/{id}', 'AllPlacedOrdersController@placedOrders')->name('show.placeorders');
+
+// ALL CHARGES
+Route::get('/all_charges', 'ChargesController@allCharges')->name('all.charges');
+
+
 Route::get('/all_reports', 'AllreportsController@allReports')->name('all.reports');
 
 
@@ -52,8 +84,8 @@ Route::get('/all_reports', 'AllreportsController@allReports')->name('all.reports
 
 
 
-// USERS ROUTE
-Route::middleware(['auth'])->prefix('user')->group(function () {
+// USERS ROUTE ADD 'verified' INSIDE (['auth',])
+Route::middleware(['auth' ])->prefix('user')->group(function () {
     Route::get('/', 'DashboardController@index')->name('user.dashboard');
 
 // ROUTE FOR PLACE ORDER BEGINS
@@ -77,6 +109,8 @@ Route::get('/form', 'PaymentController@show')->name('form');
 Route::post('/pay/{place}', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback'])->name('payment.callback');
 Route::get('/success', 'PaymentController@success')->name('success');
+//PAY FROM WALLET
+Route::get('/pay_from_wallet/{place}','PaymentController@walletPay')->name('wallet.pay');
 // RECIEVED PAYMENT ROUTE
 Route::post('/recieved/{transaction_id}', 'PaymentController@recievedOrder')->name('recieved.order');
 
@@ -98,6 +132,8 @@ Route::post('/store-plan', 'PlanController@store')->name('store');
 // Route::get('dash-board', 'DashboardController@dash')->name('dash');
 
 Route::get('/profile', 'MyProfileController@profile')->name('profile');
+Route::post('/post_profile', 'MyProfileController@postProfile')->name('post.profile');
+
 
 // PRIVACY AND POLICY ROUTE
 Route::get('/privacy-policy', 'PrivacyPolicyController@privacy')->name('privacy');
@@ -158,6 +194,7 @@ Route::get('/in-progress', 'InProgressController@progress')->name('progress');
 
 Route::get('/thanks', 'ThanksController@thanks')->name('thanks');
 Route::get('/insufficient_funds', 'ThanksController@insufficientFunds')->name('insufficient');
+Route::get('/insuf_payfunds', 'ThanksController@insufPayfunds')->name('insufpay.funds');
 
 // Route::get('/recieved', 'RecievedController@recieved')->name('recieved');
 

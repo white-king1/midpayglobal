@@ -11,9 +11,6 @@
     <title>Midfee Global-Landing Page </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shorBtcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
-    <!-- Place favicon.ico in the root directory -->
-
     <!-- CSS here -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/animate.min.css">
@@ -27,6 +24,12 @@
     <link rel="stylesheet" href="/assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+     {{-- PLACE FAVICON ICON BELLOW HERE --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
 </head>
 
 <body>
@@ -38,16 +41,17 @@
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="{{route('home')}}"><img src="/assets/img/logo/mdnew.png" alt="logo"></a>
+                                <a href="{{ route('home') }}"><img class="img-fluid" src="/assets/images/white png.png"
+                                        alt="logo" width="200"></a>
                             </div>
                         </div>
-                        <div class="col-xl-8 col-lg-9">
+                        <div class="col-xl-8 col-lg-9" style="margin-right: 10%">
                             <div class="responsive"><i class="icon dripicons-align-right"></i></div>
                             <div class="main-menu text-right text-xl-right">
                                 <nav id="mobile-menu">
                                     <ul>
                                         <li class="has-sub">
-                                            <a href="{{route('home')}}">Home</a>
+                                            <a href="{{ route('home') }}">Home</a>
                                         </li>
                                         <li><a href="#about">About Us</a></li>
 
@@ -57,22 +61,22 @@
                                         {{-- <li><a href="{{route('fetch'), 1}}">Rigister As A Vendor</a></li> --}}
 
                                         @guest
-                                        <li><a href="{{ route('register') }}">SignUp</a></li>
-                                        <li><a href="{{ route('login') }}">Login</a></li>
+                                            <li><a href="{{ route('register') }}">SignUp</a></li>
+                                            <li><a href="{{ route('login') }}">Login</a></li>
                                         @endguest
 
                                         @auth
-                                        <li><a href="{{ route('user.dashboard') }}">My Dashboard</a></li>
+                                            <li><a href="{{ route('user.dashboard') }}">My Dashboard</a></li>
 
-                                        <li>
-                                            <a href="javascript: void()">
-                                            <form action="{{ route('logout') }} " method="post">@csrf
+                                            <li>
+                                                <a href="javascript: void()">
+                                                    <form action="{{ route('logout') }} " method="post">@csrf
 
-                                                <button style="border: none; background-color: none">Logout</button>
-                                            </form>
-                                            </a>
+                                                        <button style="border: none; background-color: none">Logout</button>
+                                                    </form>
+                                                </a>
 
-                                        </li>
+                                            </li>
 
                                         @endauth
                                     </ul>
@@ -87,7 +91,7 @@
     </header>
     <!-- header-end -->
     <!-- main-area -->
-   @yield('content')
+    @yield('content')
     <!-- main-area-end -->
     <!-- footer -->
     <footer class="footer-bg footer-p pt-60"
@@ -99,11 +103,14 @@
                     <div class="col-xl-3 col-lg-3 col-sm-6">
                         <div class="footer-widget mb-30">
                             <div class="logo mt-15 mb-15">
-                                <a href="#"><img src="/assets/img/logo/mdnew.png" alt="logo"></a>
+                                <a href="#">
+                                    <img class="img-fluid" src="/assets/images/white png.png" alt="logo"
+                                        width="200">
+                                </a>
                             </div>
                             <div class="footer-text mb-20">
-                                <p>We at Midfee Global,we ensure safe transactions.Intrust in us with your cash and we garaunty you enjoy the worth of your cash.
-
+                                <p>We at Midfee Global,we secure the safety of your transactions.
+                                    Intrust in us your cash and we guaranty it's availability at any time.
                                 </p>
                             </div>
                             <div class="footer-social">
@@ -126,7 +133,7 @@
                                     <li><a href="#">Career</a></li>
                                     <li><a href="#">Reviews</a></li>
                                     <li><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{ route('terms') }}">Terms & Conditions</a></li>
+                                            href="{{ route('terms') }}">Terms & Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -143,7 +150,7 @@
                                     <li><a href="#">How It Works</a></li>
                                     <li><a href="#">Privacy & Policy</a></li>
                                     <li><a class="sidebar-link sidebar-title link-nav"
-                                        href="{{ route('terms') }}">Terms & Condition</a></li>
+                                            href="{{ route('terms') }}">Terms & Condition</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -158,16 +165,15 @@
                                     <ul>
                                         <li>
                                             <i class="icon dripicons-phone"></i>
-                                            <span>+234 70 310 115 73<br>+234 90 977 632 24</span>
+                                            <span>+2347031011573<br>+2349097763224</span>
                                         </li>
                                         <li>
                                             <i class="icon dripicons-mail"></i>
-                                            <span><a href="mailto:info@example.com">info@midappay.com</a><br><a
-                                                    href="mailto:sale@example.com">sale@midappay.com</a></span>
+                                            <span><a href="mailto:info@example.com">midfeeglobal@gmail.com</a></span>
                                         </li>
                                         <li>
                                             <i class="fal fa-map-marker-alt"></i>
-                                            <span>PLOT 439 WATERBOARD EAGLE ISLAND <br> PORT-HARCOURT,<br>RIVERSSTATE,NIGERIA.</span>
+                                            <span>RIVERSSTATE,NIGERIA.</span>
                                         </li>
                                     </ul>
 

@@ -18,6 +18,13 @@
                 </div>
             </div>
         </div>
+        @if (Session::has('flash_message'))
+        <center>
+            <div class="alert {{ Session::get('flash_type') }} col-md-4">
+                <h6>{{ Session::get('flash_message') }}</h6>
+            </div>
+        </center>
+    @endif
         <!-- Container-fluid starts-->
         <div class="container-fluid default-dash">
             <div class="row">
@@ -26,7 +33,32 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body">
-                                    <div class="greeting-user">
+                                    <div class="row">
+                                        @if (Auth::user()->image == null)
+                                            <div class="col-md-2">
+                                                <img class="rounded-circle img-fluid" src="/assets/images/avatarimagez.png"
+                                                    alt="uploadimage">
+                                            </div>
+                                        @else
+                                            <div class="col-md-2 ">
+                                                <img class="rounded-circle img-fluid"
+                                                    src="/upload_images/{{ Auth::user()->image }}" alt="user_image">
+                                            </div>
+                                        @endif
+                                        <div class="col-md-3" style="margin-top: 30px;">
+                                            <h3 class="caption">{{ Auth::user()->name }}</h3>
+                                            <h5>{{ Auth::user()->email }}</h5>
+                                        </div><!-- single end -->
+                                        <div class="col-md-2" style="margin-top: 30px;">
+                                            <h6 class="caption">Available Balance</h6>
+                                            <h5> ₦{{ number_format(Auth::user()->wallet->balance) }}</h5>
+                                        </div><!-- single end -->
+                                        <div class="col-md-2" style="margin-top: 30px;">
+                                            <h3 class="caption">Last Access</h3>
+                                            <p>{{ Auth::user()->created_at }}</p>
+                                        </div><!-- single end -->
+                                    </div>
+                                    {{-- <div class="greeting-user">
                                         <h1> {{ Auth::user()->name }}</h1>
                                         <p>Your dashboard is ready!</p>
                                         <br>
@@ -35,7 +67,7 @@
                                         <br>
                                         <h5>Pending Balance: ₦{{ number_format(Auth::user()->wallet->pending_balance) }}
                                         </h5>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="cartoon-img"><img class="img-fluid"
@@ -188,76 +220,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-                {{-- <div class="col-xl-6 col-lg-12 dash-xl-100">
-        <div class="card total-transactions">
-            <div class="row m-0">
-                <div class="col-md-6 col-sm-6 p-0">
-                    <div class="card-header card-no-border">
-                        <h5>Total Transactions</h5>
-                    </div>
-                    <div class="card-body pt-0">
-                        <div>
-                            <div id="transaction-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 p-0 report-sec">
-                    <div class="card-header card-no-border">
-                        <div class="header-top">
-                            <h5 class="m-0">Report</h5>
-                            <div class="icon-box onhover-dropdown"><i data-feather="more-horizontal"></i>
-                                <div class="icon-box-show onhover-show-div">
-                                    <ul>
-                                        <li> <a>
-                                                Today</a></li>
-                                        <li> <a>
-                                                Yesterday</a></li>
-                                        <li> <a>
-                                                Tommorow</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body pt-0">
-                        <div class="row">
-                            <div class="col-6 report-main">
-                                <div class="report-content text-center">
-                                    <p class="font-theme-light">This Week</p>
-                                    <h5>+86.53%</h5>
-                                    <div class="progress progress-round-primary">
-                                        <div class="progress-bar" role="progressbar" style="width: 45%"
-                                            aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="report-content text-center">
-                                    <p class="font-theme-light">Last Week</p>
-                                    <h5>-34.50%</h5>
-                                    <div class="progress progress-round-secondary">
-                                        <div class="progress-bar" role="progressbar" style="width: 65%"
-                                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="media report-perfom">
-                                    <div class="media-body">
-                                        <p class="font-theme-light">Performance </p>
-                                        <h5 class="m-0">+93.82%</h5>
-                                    </div><a class="btn btn-primary" href="">New Report</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
                 <div class="col-xl-4 col-md-6 dash-31 dash-xl-50">
                     <div class="card recent-activity">
                         <div class="card-header card-no-border">
@@ -312,20 +274,7 @@
                                             <td><span class="badge badge-light-theme-light font-theme-light">2 hours
                                                     ago</span></td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                        src="../assets/images/dashboard/rectangle-28.jpg" alt="">
-                                                    <div class="media-body"><a href="blog-single.html">
-                                                            <h5>Business Project Research</h5>
-                                                        </a>
-                                                        <p>News in English: Get all Breaking...</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-light-theme-light font-theme-light">3 day
-                                                    ago</span></td>
-                                        </tr>
+
                             </div>
                         </div>
                     </div>

@@ -40,7 +40,7 @@
                                                     <label class="badge badge-info">Restrict</label>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-outline-danger">Delete</button>
+                                                    <a href="{{ route('delete.users', $user->id) }}" class="btn btn-outline-danger">Delete</a>
                                                 </td>
                                             </tr>
                                         @endforeach
