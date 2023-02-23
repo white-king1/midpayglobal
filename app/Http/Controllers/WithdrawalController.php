@@ -20,7 +20,7 @@ class WithdrawalController extends Controller
         if (Auth::user()->wallet->balance <= $request->amount + 100) {
             return redirect()->back()->with('flash_message', 'You have insufficient Balance .')
             ->with('flash_type', 'alert-success');
-        }
+        }else{
 
 
         $details = $request->account_name . ' ,' . $request->account_number . ' ,' . $request->bank;
@@ -43,5 +43,6 @@ class WithdrawalController extends Controller
         return redirect()->back()->with('flash_message', 'Withdrawal Successful & you will be credited in 10-15minutes .')
             ->with('flash_type', 'alert-success');
         // return view('user.thanks');
+    }
     }
 }
