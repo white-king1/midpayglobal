@@ -12,7 +12,7 @@ class AllrefundsController extends Controller
 {
     public function allRefunds()
     {
-        $user = User:: all() && PlaceOrder:: all();
+        $user = User:: latest()->get() && PlaceOrder:: latest()->get();
         $all_refunds = Refund::with('user')->latest()->get();
         return view ('user.all_refunds', compact('all_refunds'));
     }

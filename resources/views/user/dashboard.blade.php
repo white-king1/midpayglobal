@@ -58,16 +58,7 @@
                                             <p>{{ Auth::user()->created_at }}</p>
                                         </div><!-- single end -->
                                     </div>
-                                    {{-- <div class="greeting-user">
-                                        <h1> {{ Auth::user()->name }}</h1>
-                                        <p>Your dashboard is ready!</p>
-                                        <br>
-                                        <br>
-                                        <h5>Available Balance: ₦{{ number_format(Auth::user()->wallet->balance) }}</h5>
-                                        <br>
-                                        <h5>Pending Balance: ₦{{ number_format(Auth::user()->wallet->pending_balance) }}
-                                        </h5>
-                                    </div> --}}
+
                                 </div>
                             </div>
                             <div class="cartoon-img"><img class="img-fluid"
@@ -75,21 +66,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-xl-3 col-md-6 dash-xl-50">
-                    <div class="card pb-0 o-hidden earning-card">
-                        <div class="card-header earning-back"></div>
-                        <div class="card-body p-0">
-                            <div class="earning-content"><img class="img-fluid" src="../assets/images/avatar.jpg"
-                                    alt=""><a href="blog-single.html">
-                                    <h4>Wallet Balance</h4>
-                                    <h6>Available balance:₦{{ number_format(Auth::user()->wallet->balance) }}</h6>
-                                </a><span>Pending balance:₦0.00 </span>
-
-                                <div id="earning-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+                
                 <div class="col-xl-12 col-md-12 dash-50">
                     <div class="card ongoing-project">
                         <div class="card-header card-no-border">

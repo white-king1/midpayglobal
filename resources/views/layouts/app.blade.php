@@ -41,8 +41,9 @@
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="{{ route('home') }}"><img class="img-fluid" src="/assets/images/white png.png"
-                                        alt="logo" width="200"></a>
+                                <a href="{{ route('home') }}">
+                                    <img class="img-fluid" src="/assets/images/white png.png" alt="logo" width="200">
+                                </a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-9" style="margin-right: 10%">
@@ -56,9 +57,6 @@
                                         <li><a href="#about">About Us</a></li>
 
                                         <li><a href="#screen">How It Works</a></li>
-
-
-                                        {{-- <li><a href="{{route('fetch'), 1}}">Rigister As A Vendor</a></li> --}}
 
                                         @guest
                                             <li><a href="{{ route('register') }}">SignUp</a></li>
@@ -114,10 +112,10 @@
                                 </p>
                             </div>
                             <div class="footer-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#"><i class="icon dripicons-location"></i></a>
+                                <a href="#"><i class="icon dripicons-map"></i></a>
+                                <a href="#"><i class="icon dripicons-mail"></i></a>
+                                <a href="#"><i class="icon dripicons-phone"></i></a>
                             </div>
                         </div>
                     </div>
@@ -172,14 +170,11 @@
                                             <span><a href="mailto:info@example.com">midfeeglobal@gmail.com</a></span>
                                         </li>
                                         <li>
-                                            <i class="fal fa-map-marker-alt"></i>
-                                            <span>RIVERSSTATE,NIGERIA.</span>
+                                            <i class="icon dripicons-location"></i>
+                                            <span>NIGERIA.</span>
                                         </li>
                                     </ul>
-
                                 </div>
-
-
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@ class AllwithdrawalsController extends Controller
 {
     public function allWithdrawals()
     {
-        $user = User:: all();
+        $user = User:: latest()->get();
         $all_withdrawals = TransactionWallet::where('is_credit',  0)->latest()->get();
         return view('user.all_withdrawals', compact('all_withdrawals'));
     }

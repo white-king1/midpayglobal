@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <br>
-    <div class="card">
+    <div class="card" style="margin-top:5%; margin-bottom:10%;">
         <div class="card-header">{{ __('Register') }}</div>
 
         <div class="card-body">
@@ -617,27 +616,25 @@
 
 
 
-                <div class="form-group row mb-0">
 
-                    <div class="row" style="padding-left: 500px;">
-                        <div class="col-md-4">
+                    <div class="row" style="padding-left: 30%;">
+                        <div class="col-md-2">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Register') }}
                             </button>
                         </div>
 
-                        <div class="col-md-8 ">
-                            <p>ALREADY HAVE AN ACCOUNT
+                        <div class="col-md-10 ">
+                            <p>HAVE AN ACCOUNT
                                 <a href="{{ route('login') }}"><strong>LOGIN</strong></a>
                             </p>
                         </div>
                     </div>
 
-                </div>
+
 
             </form>
         </div>
     </div>
-    <br>
-    <br>
+
 @endsection

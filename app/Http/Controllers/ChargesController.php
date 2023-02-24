@@ -10,7 +10,7 @@ class ChargesController extends Controller
 {
     public function allCharges ()
     {
-        $all_charges = PlaceOrder::all();
+        $all_charges = PlaceOrder::latest()->get();
         return view ('user.all_charges', compact('all_charges'));
     }
 }

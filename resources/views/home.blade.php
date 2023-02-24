@@ -42,8 +42,10 @@
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="{{ route('home') }}"><img src="/assets/img/logo/mdnew.png" alt="logo"
-                                        width="200"></a>
+                                <a href="{{ route('home') }}">
+                                    <img class="img-fluid" src="/assets/images/white png.png" alt="logo"
+                                        width="200">
+                                </a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-9" style="margin-right: 10%">
@@ -109,9 +111,8 @@
                             </ul>
                             <h2 data-animation="fadeInUp" data-delay=".4s">Best Secured <span>Online Transactions</span>
                             </h2>
-                            <p data-animation="fadeInUp" data-delay=".6s"><strong>Always use Midappay.com to buy and
-                                    sell
-                                    online.
+                            <p data-animation="fadeInUp" data-delay=".6s"><strong>Always use Midfeeglobal.com to Secure
+                                    your transactions.
                                 </strong>
                             </p>
 
@@ -119,7 +120,7 @@
                     </div>
                     <div class="col-lg-6" style="margin-top:10%;">
                         {{-- <img src="/assets/img/bg/mobile.png" alt="shape" class="s-img"> --}}
-                        <img  class="img-fluid" src="assets/images/Iphone X slant.png" alt="shape" class="s-img">
+                        <img class="img-fluid" src="/assets/images/Iphone X slant.png" alt="shape" class="s-img">
                     </div>
                 </div>
 
@@ -140,7 +141,7 @@
 
                             <h2>ABOUT US</h2>
                             <p>
-                                MIDPAYGLOBAL provides a unique, safe and secured platform for two parties <br>
+                                MIDFEEGLOBAL provides a unique, safe and secured platform for two parties <br>
                                 (Buyer and Seller) to exchange cash,goods and services.
                             </p>
                             <p>
@@ -155,10 +156,10 @@
                             <p>
                                 We as a team ensures that both parties are satisfied before executing any request from
                                 any
-                                of the parties (A Buyer and A Seller).
+                                of the parties, either(A Buyer and A Seller).
                             </p>
                             <p>
-                                MIDPAYGLOBAL Stands in the gap as a middle man between both parties, mediating, by
+                                MIDFEEGLOBAL Stands in the gap as a middle man between both parties, mediating, by
                                 securing
                                 any cash deposit made by a Buyer, for a particular service or a group of services a
                                 Seller
@@ -166,7 +167,7 @@
                                 funds to the client KNOWN AS THE SELLER.
                             </p>
                             <h6>
-                                MIDPAYGLOBAL LIMITED is an option for "Payment on Delivery”.
+                                MIDFEEGLOBAL is an option for "Payment on Delivery”.
                             </h6>
                         </div>
                     </div>
@@ -178,12 +179,12 @@
                                 <img src="/assets/img/icon/f-icon1.png" />
                             </div>
                             <div class="second-services-content">
-                                <span>Midpayglobal Limited </span>
+                                <span>Midfeeglobal </span>
 
-                                <p>We are aunique,safe and <b>Secured</b> Transaction Plaform,which
+                                <p>We are a unique,safe and <b>Secured</b> Transaction Plaform,which
                                     ensures a safe means of exhange of cash,goods and services between a Buyer and a
                                     Seller.
-                                    Our Goal is to satify parties.
+                                    Our Goal is to satify both parties.
 
                                 </p>
                                 <a href="#"><span>1</span></a>
@@ -216,8 +217,7 @@
                             </div>
                             <div class="second-services-content">
                                 <h5>Fully Secured</h5>
-                                <p>We are,experienced and a passionate team working towards your Both partires (Buyer
-                                    and
+                                <p>We are,an experienced and passionate team working towards Both partires (Buyer and
                                     Seller) satisfaction. <br>
                                     We live and breathe to satify Our Clients</p>
                                 <a href="#"><span>3</span></a>
@@ -242,25 +242,25 @@
                     <div class="col-xl-7">
                         <div class="choose-wrap">
                             <div class="section-title w-title left-align mb-25">
-                                <h2>Easy and quick access to Funds for both parties at any time</h2>
+                                <h5>Easy and quick access to Funds for both parties at any time</h5>
                             </div>
                             <div class="choose-content">
-                                <p>QUICKLY DOWNLOAD AND REGISTER ON MIDPAYGLOBAL FROM YOUR APP STORE OR GOOGLE PLAY
-                                    STORE.
-                                    <br> As a seller create an invoice on Midpayglobal and instantly recieve a
+                                <p>QUICKLY DOWNLOAD AND SIGNUP ON MIDFEEGLOBAL FROM YOUR APP STORE OR GOOGLE PLAY STORE.
+                                    <br> As a seller create an invoice on Midfeeglobal and instantly recieve a
                                     Transaction ID.
                                 </p>
                                 <p>Ask for refund when you are not Satified with what you recieved from a Seller. <br>
-                                    As a Seller Request for a withdrawal and get credited within 10-15minutes.
+                                    As a Seller Request for a withdrawal and get credited within 10-15minutes <br>
+                                    and also report any transaction that has not paid you.
                                 </p>
 
                                 <div class="choose-btn mt-30">
                                     <a href=""><span class="icon"><img src="/assets/img/icon/apple-icon.png"
                                                 alt="apple-icon"></span>
-                                        <span class="text"> Available on <strong>APP STORE</strong></span></a>
+                                        <span class="text"> Available Soon on <strong>APP STORE</strong></span></a>
                                     <a href="" class="g-btn"><span class="icon"><img
                                                 src="/assets/img/icon/g-play-icon.png" alt="apple-icon"></span>
-                                        <span class="text"> Available on <strong>GOOGLE PLAY</strong></span></a>
+                                        <span class="text"> Available Soon on <strong>GOOGLE PLAY</strong></span></a>
                                 </div>
                             </div>
                         </div>
@@ -327,15 +327,12 @@
                                                 the
                                                 Buyer</h6>
                                             <ul>
-                                                <li>On left hand side of your Dahsboard,
-                                                    <br>Scroll down and click on "Recieved",
-                                                    <br> Type in your password and
-                                                    <br> click SUBMIT
-                                                    <br> Select one of the options and proceed to
-                                                    <br> Click on PAYSELLER or REFUND button below the form.
+                                                <li>On your Dahsboard,the BUYER ORDER TRANSACTIONS TABLE,
+                                                    <br> click on "Recieved",
+                                                    <br> To complete your transaction,
                                                     <br>Automatically an Email will be sent to the Seller to proceed to
                                                     witdraw
-                                                    <br> in which the money will me available in the wallet for
+                                                    <br> in which the money will be available in the wallet for
                                                     withdrawal.
                                                 </li>
                                             </ul>
@@ -348,7 +345,7 @@
                                         <div class="text">
                                             <h6> This is for Withdrawal <br> (When Item/Items is recieved)</h6>
                                             <ul>
-                                                <li>Go to your Dashboard,Click on Withdrawal
+                                                <li>Go to your Dashboard,Click on Withdraw
                                                     <br> Fill in your your account details <br> Click on Proceed,
                                                     <br> Which shows"TRANSACTION COMPLETED",<br> IT TAKES 10MINS-15MINS
                                                     <br> FOR YOUR LOCAL BANK ACCOUNT TO BE CREDITED.
@@ -431,8 +428,8 @@
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/malen2.jpg" alt="/assets/img">
                                         <div class="ta-info">
-                                            <h6>Mr Jamal Ndubusis</h6>
-                                            <span>Author</span>
+                                            <h6>Mr Jamal Ndubuisi</h6>
+                                            <span>Enterprenuer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
@@ -446,33 +443,33 @@
                                 <div class="single-testimonial">
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/femalen3.jpg" alt="/assets/img">
+                                        <br>
                                         <div class="ta-info">
                                             <h6>Miss Joan Eze</h6>
-                                            <span>Author</span>
+                                            <span>Importer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
                                     </div>
                                     <br>
-                                    <p>I was empressed by the customer service response and follow up after my complains
+                                    <p>I was Impressed by the customer service response and follow up after my complains
                                         about a transaction.</p>
-
-
                                 </div>
                             </div>
                             <div class="col-xl-4">
                                 <div class="single-testimonial">
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/malen3.jpg" alt="/assets/img">
+                                        <br>
                                         <div class="ta-info">
                                             <h6>Mr Judge Amadi</h6>
-                                            <span>Web Developer</span>
+                                            <span>Enterprenuer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
                                     </div>
                                     <br>
-                                    <p>Eve after much delays,i was refunded after 3 business days.</p>
+                                    <p>Even after much delays,i was refunded after 3 business days.</p>
 
                                 </div>
                             </div>
@@ -480,15 +477,16 @@
                                 <div class="single-testimonial">
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/femalen1.jpg" alt="/assets/img">
+                                        <br>
                                         <div class="ta-info">
                                             <h6>Miss Helen Okoro</h6>
-                                            <span>Web Developer</span>
+                                            <span>Online Enterprenuer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
                                     </div>
                                     <br>
-                                    <p>No Stress,straight precise and i got paid</p>
+                                    <p>No Stress,straight, precise and i got paid</p>
 
                                 </div>
                             </div>
@@ -496,15 +494,17 @@
                                 <div class="single-testimonial">
                                     <div class="testi-author text-left">
                                         <img src="/assets/img/testimonial/malen1.jpg" alt="/assets/img">
+                                        <br>
+                                        <br>
                                         <div class="ta-info">
                                             <h6>Mr Victory Omo</h6>
-                                            <span>Web Developer</span>
+                                            <span>Importer</span>
                                         </div>
                                     </div>
                                     <div class="qutation"><img src="/assets/img/bg/qutation.png" alt="qutation.png">
                                     </div>
                                     <br>
-                                    <p>So Satisfying,i got paid as soon as my Client recieved his pckage.</p>
+                                    <p>So Satisfying,i got paid as soon as my Client recieved his items.</p>
 
                                 </div>
                             </div>
@@ -521,99 +521,96 @@
     <!-- main-area-end -->
     <!-- footer -->
     <footer class="footer-bg footer-p pt-60"
-        style="background-image: url(/assets/img/bg/f-bg.png); background-position: center top; background-size: auto;background-repeat: no-repeat;">
+    style="background-image: url(/assets/img/bg/f-bg.png); background-position: center top; background-size: auto;background-repeat: no-repeat;">
 
-        <div class="footer-top">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-sm-6">
-                        <div class="footer-widget mb-30">
-                            <div class="logo mt-15 mb-15">
-                                <a href="#"><img src="/assets/img/logo/mdnew.png" alt="logo"></a>
-                            </div>
-                            <div class="footer-text mb-20">
-                                <p>We at Midfee Global,we ensure safe transactions.Intrust in us with your cash and we
-                                    garaunty you enjoy the worth of your cash.
-
-                                </p>
-                            </div>
-                            <div class="footer-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            </div>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="logo mt-15 mb-15">
+                            <a href="#">
+                                <img class="img-fluid" src="/assets/images/white png.png" alt="logo"
+                                    width="200">
+                            </a>
+                        </div>
+                        <div class="footer-text mb-20">
+                            <p>We at Midfee Global,we secure the safety of your transactions.
+                                Intrust in us your cash and we guaranty it's availability at any time.
+                            </p>
+                        </div>
+                        <div class="footer-social">
+                            <a href="#"><i class="icon dripicons-location"></i></a>
+                            <a href="#"><i class="icon dripicons-map"></i></a>
+                            <a href="#"><i class="icon dripicons-mail"></i></a>
+                            <a href="#"><i class="icon dripicons-phone"></i></a>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-sm-6">
-                        <div class="footer-widget mb-30">
-                            <div class="f-widget-title">
-                                <h5>Company News</h5>
-                            </div>
-                            <div class="footer-link">
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h5>Company News</h5>
+                        </div>
+                        <div class="footer-link">
+                            <ul>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Career</a></li>
+                                <li><a href="#">Reviews</a></li>
+                                <li><a class="sidebar-link sidebar-title link-nav"
+                                        href="{{ route('terms') }}">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h5>Useful Links</h5>
+                        </div>
+                        <div class="footer-link">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">How It Works</a></li>
+                                <li><a href="#">Privacy & Policy</a></li>
+                                <li><a class="sidebar-link sidebar-title link-nav"
+                                        href="{{ route('terms') }}">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h5>Contact Us</h5>
+                        </div>
+                        <div class="footer-link">
+                            <div class="f-contact">
                                 <ul>
-                                    <li><a href="#">Partners</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Career</a></li>
-                                    <li><a href="#">Reviews</a></li>
-                                    <li><a class="sidebar-link sidebar-title link-nav"
-                                            href="{{ route('terms') }}">Terms & Conditions</a></li>
+                                    <li>
+                                        <i class="icon dripicons-phone"></i>
+                                        <span>+2347031011573<br>+2349097763224</span>
+                                    </li>
+                                    <li>
+                                        <i class="icon dripicons-mail"></i>
+                                        <span><a href="mailto:info@example.com">midfeeglobal@gmail.com</a></span>
+                                    </li>
+                                    <li>
+                                        <i class="icon dripicons-location"></i>
+                                        <span>NIGERIA.</span>
+                                    </li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-3 col-sm-6">
-                        <div class="footer-widget mb-30">
-                            <div class="f-widget-title">
-                                <h5>Useful Links</h5>
-                            </div>
-                            <div class="footer-link">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">How It Works</a></li>
-                                    <li><a href="#">Privacy & Policy</a></li>
-                                    <li><a class="sidebar-link sidebar-title link-nav"
-                                            href="{{ route('terms') }}">Terms & Condition</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-sm-6">
-                        <div class="footer-widget mb-30">
-                            <div class="f-widget-title">
-                                <h5>Contact Us</h5>
-                            </div>
-                            <div class="footer-link">
-                                <div class="f-contact">
-                                    <ul>
-                                        <li>
-                                            <i class="icon dripicons-phone"></i>
-                                            <span>+234 70 310 115 73<br>+234 90 977 632 24</span>
-                                        </li>
-                                        <li>
-                                            <i class="icon dripicons-mail"></i>
-                                            <span><a href="mailto:info@example.com">info@midappay.com</a><br><a
-                                                    href="mailto:sale@example.com">sale@midappay.com</a></span>
-                                        </li>
-                                        <li>
-                                            <i class="fal fa-map-marker-alt"></i>
-                                            <span>PLOT 439 WATERBOARD EAGLE ISLAND <br>
-                                                PORT-HARCOURT,<br>RIVERSSTATE,NIGERIA.</span>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-    </footer>
+</footer>
     <!-- footer-end -->
 
 

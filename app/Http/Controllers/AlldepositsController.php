@@ -10,7 +10,7 @@ class AlldepositsController extends Controller
 {
     public function allDeposits()
     {
-        $user = User::all();
+        $user = User::latest()->get();
         $all_deposits = TransactionWallet::where('is_credit', 1 )->latest()->get();
         return view ('user.all_deposits',compact('all_deposits'));
     }

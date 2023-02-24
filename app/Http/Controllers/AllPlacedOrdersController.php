@@ -11,8 +11,8 @@ class AllPlacedOrdersController extends Controller
 {
     public function allPlacedorders()
     {
-        $user = User::all();
-        $all_placeorders = PlaceOrder::all();
+        $user = User::latest()->get();
+        $all_placeorders = PlaceOrder::latest()->get();
         return view ('user.all_placeorders', compact('all_placeorders'));
     }
 }

@@ -45,10 +45,6 @@ class PaymentController extends Controller
 
         $u = User::where('id',$place_id->id)->first();
         Mail::to($u->email)->send(new PaymentMaid($placeOrder));
-
-
-
-
     }
 
     /**
@@ -124,17 +120,11 @@ class PaymentController extends Controller
            $seller= Wallet::where('user_id',$place->seller_id)->first()->increment('balance',$money);
 
            $buyer = Wallet::where('user_id',$place->buyer_id)->first()-> decrement ('balance',$money);
-           dd($place->buyer_id);
 
         }
         return view('vieworder.success');
 
     }
-
-
-
-
-
     /**
      * Display a listing of the resource.
      *

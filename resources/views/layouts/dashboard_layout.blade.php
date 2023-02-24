@@ -12,7 +12,7 @@
     <meta name="keywords"
         content="admin template, Zeta admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <title>Midfee user dashboard </title>
+    <title>Midfeeglobal user dashboard </title>
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -44,7 +44,7 @@
     <link id="color" rel="stylesheet" href="/user_assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="/user_assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/midappaynew.css">
+    <link rel="stylesheet" href="/assets/css/midappaynew.css">
 
      {{-- PLACE FAVICON ICON BELLOW HERE --}}
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">

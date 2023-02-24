@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-5 col-sm-7 col-xl-8 p-0">
                   <h4 class="mb-1 mb-sm-0">New refreshing look</h4>
-                  <p class="mb-0 font-weight-normal d-none d-sm-block">Corona admin template now with a new facelift for enhanced legibility and aesthetics!</p>
+                  <p class="mb-0 font-weight-normal d-none d-sm-block">Midfeeglobal Admin Dashboard now with a new facelift for enhanced legibility and aesthetics!</p>
                 </div>
                 <div class="col-3 col-sm-2 col-xl-2 ps-0 text-center">
                   <button class="btn btn-outline-light btn-rounded get-started-btn">Get Started</button>
@@ -661,14 +661,5 @@
         </div>
       </div>
     </div>
-    <!-- content-wrapper ends -->
-    <!-- partial:partials/_footer.html -->
-    <!-- partial -->
   </div>
-
-
-
-
-
-
 @endsection
