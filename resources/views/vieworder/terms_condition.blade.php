@@ -3,16 +3,18 @@
 <div class="page-body">
     <div class="container-fluid">
         <div class="page-title">
-            <div class="row">
+            <div class="row" style="margin-top: 3%;">
                 <div class="col-12 col-sm-6">
+                    <center>
                     <h3> TERMS & CONDITIONS</h3>
+                </center>
                 </div>
                 <div class="col-12 col-sm-6">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">
                                 <i data-feather="home"></i></a></li>
                         <li class="breadcrumb-item">TERMS</li>
-                        <li class="breadcrumb-item active">AND CONDITIONS </li>
+                        <li class="breadcrumb-item active">& CONDITIONS </li>
                     </ol>
                 </div>
             </div>
@@ -28,7 +30,7 @@
                             <div class="col">
                                 <div class="mb-3">
                                     <div class="container card card-body">
-                                        <label class="form-label" for="exampleInputPassword27"> <strong>WELCOME TO MIDAPPAY
+                                        <label class="form-label" for="exampleInputPassword27"> <strong>WELCOME TO MIDFEE GLOBAL
                                             <br> PRIVACY POLICY</strong> <br>
 
                                             OUR PRIVACY AND POLICY ALSO ENTAILS TERMS AND CONDITIONS
@@ -37,8 +39,8 @@
 
 
                                         <p>
-                                            MIDAPPAY understands that your privacy is important to you and We are
-                                            committed to protecting the privacy of your personally <br>
+                                            MIDFEE GLOBAL understands that your privacy is important to you and We are
+                                            committed to protecting the privacy of your personal <br>
                                             finnancial identifiable information as you use this website. This Privacy
                                             Policy tells you how we protect and use information that we gather from you.
                                             <br>
@@ -48,7 +50,7 @@
                                             your use of this website, <br>
                                             and any additional terms that may apply when you access particular services
                                             or materials on certain areas of this website. <br>
-                                            “We,” “our” means MIDAPPAY. “You,” “your,” visitor,” or “user” means the
+                                            “We,” “our” means MIDFEE GLOBAL. “You,” “your,” visitor,” or “user” means the
                                             individual accessing this site. <br>
                                         </p>
                                         <br>
@@ -71,18 +73,16 @@
                                         <p>
                                             Personal information is information that identifies you as an individual,
                                             such as your name, mailing address, <br>
-                                            e-mail address, telephone number, and fax number. We may collect personal
+                                            e-mail address, telephone number, and your banking details. We may collect personal
                                             information from you in a variety of ways; <br>
                                             When you send us an application or other form, <br>
                                             When you conduct a transaction with us, our affiliates, or others, <br>
                                             When we collect information about you in support of a transaction, such as
                                             debit card information <br>
-                                            When we collect information about you in support of a transaction, such your
+                                            When we collect information about you in support of a transaction, such as your
                                             banking details, <br>
                                             In some places on this website you have the opportunity to send us personal
-                                            information about yourself, <br>
-                                            to elect to receive particular information, to make a deposit for our
-                                            services, or to subscribe as a vendor.
+                                            information about yourself.
                                         </p>
                                         <br>
                                         <h3> COOKIES OR OTHER TECHNOLOGIES USED TO COLLECT PERSONAL INFORMATION?</h3>
@@ -94,14 +94,14 @@
                                             or deliver viruses to your computer. Cookies are uniquely assigned to you,
                                             and can only be read by a web server in the domain <br>
                                             that issued the cookie to you. One of the primary purposes of cookies is to
-                                            provide a convenience feature to save you time. <br>
+                                            provide a convenient feature to save you time. <br>
                                             The purpose of a cookie is to tell the Web server that you have returned to
                                             a specific page. For example, if you register with us, <br>
-                                            a cookie helps MIDAPPAY to recall your specific information on subsequent
+                                            a cookie helps MIDFEE GLOBAL to recall your specific information on subsequent
                                             visits. <br>
                                             This simplifies the process of recording your personal information, such as
                                             billing addresses, shipping addresses, and so on. <br>
-                                            When you return to the same Bankable Wisdom website, the information you
+                                            When you return to the same Midfeeglobal website, the information you
                                             previously provided can be retrieved, <br>
                                             so you can easily use the features that you customized.<br>
                                             A web beacon is a small graphic image that allows the party that set the web
@@ -127,10 +127,10 @@
                                             basis. These third parties use persistent cookies to help us to <br>
                                             improve the visitor experience, to manage our site content, and to track
                                             visitor behaviour. We may also contract with a third party to <br>
-                                            send e-mail to our registered [users/vendors]. To help measure and improve
+                                            send e-mail to our registered [users]. To help measure and improve
                                             the effectiveness of our e-mail communications, <br>
                                             the third party sets cookies. All data collected by this third party on
-                                            behalf of MIDAPPAY is used solely by or on behalf of MIDAPPAY <br>
+                                            behalf of MIDFEE GLOBAL is used solely by or on behalf of MIDFEE GLOBAL <br>
                                             and is shared externally only on an anonymous, aggregated basis .From time
                                             to time we may allow third parties to post advertisements <br>
                                             on our web site, and those third-party advertisements may include a cookie
@@ -139,7 +139,7 @@
                                             by third party ad servers. <br>
                                             We do not control cookies in such third party ads, and you should check the
                                             privacy policies of those advertisers and/or ad services <br>
-                                            to learn about their use of cookies andother technology before linking to an
+                                            to learn about their use of cookies and other technology before linking to an
                                             ad. We will not share your personal information <br>
                                             with these companies, but these companies may use information about your
                                             visits to this and other web sites in order to provide <br>
@@ -153,9 +153,9 @@
                                             the interactive features of the MIDAPPAY websites you visit.
                                         </p>
                                         <br>
-                                        <h3>HOW DOES MIDAPPAY USE PERSONAL INFORMATION?</h3>
+                                        <h3>HOW DOES MIDFEE GLOBAL USE PERSONAL INFORMATION?</h3>
                                         <p>
-                                            MIDAPPAY may keep and use personal information we collect about you to
+                                            MIDFEE GLOBAL may keep and use personal information we collect about you to
                                             provide you with access to this website or other products or services, <br>
                                             to respond to your requests, to bill you for transactions performed, and to
                                             provide ongoing service and support, <br>
@@ -166,20 +166,18 @@
                                             develop and improve programs, products, services and content. <br>
                                             Personal information collected online may be combined with information you
                                             provide to us through other sources. <br>
-                                            We may also remove your personal identifiers (your name, email
-                                            address,national identification number(NIN) or social security number, etc).
-                                            <br>
                                             In this case, you would no longer be identified as a single unique
-                                            individual.Once we have de-identified information, <br>
-                                            it is non-personal information and we may treat it like other non-personal
-                                            information. Finally, <br>
+                                            individual.Once we have identified your information, <br>
+                                            A non-personal information will be treated like other non-personal
+                                            information.
+                                            Finally, <br>
                                             we may use your personal information to protect our rights or property, or
                                             to protect someone’s health, safety or welfare, <br>
                                             and to comply with a law or regulation, court order or other legal
                                             processes.
                                         </p>
                                         <br>
-                                        <h3> DOES MIDAPPAY SHARE PERSONAL INFORMATION WITH OTHERS?</h3>
+                                        <h3> DOES MIDFEE GLOBAL SHARE PERSONAL INFORMATION WITH OTHERS?</h3>
                                         <p>
                                             We will not share your personal information collected from this website with
                                             an unrelated third party without your permission, <br>
@@ -197,8 +195,8 @@
                                             dissolution, or acquisition. For some sorts of transactions, in addition to
                                             our direct collection of information, <br>
                                             our third party service vendors (such as creditcard companies, clearing
-                                            houses and banks) who may provide such services as credit, insurance, <br>
-                                            and escrowservices may collect personal information directly from you to
+                                            houses and banks) who may provide such services as credit and insurance <br>
+                                            may collect personal information directly from you to
                                             assist you with your transaction. <br>
                                             We do not control how these third parties use such information, but we do
                                             ask them to disclose how they use your personal information before they
@@ -220,7 +218,7 @@
                                             As discussed in the section on cookies and other technologies, from time to
                                             time we may allow a third party to serve advertisements on this website.
                                             <br>
-                                            If you share information with the advertiser, including byclicking on their
+                                            If you share information with the advertiser, including by clicking on their
                                             ads, <br>
                                             this Privacy Policy does not control the advertisers use of your personal
                                             information, and you should check the privacy policies of <br>
@@ -231,7 +229,7 @@
                                         <h3>HOW IS PERSONAL INFORMATION USED FOR COMMUNICATIONS?</h3>
                                         <P>
                                             We may contact you periodically by e-mail, mail or telephone to provide
-                                            information regarding your transactionss,our services, <br>
+                                            information regarding your transactions,our services, <br>
                                             and content that may be of interest to you. In addition, some of the
                                             features on this website allow you to communicate with us <br>
                                             using an online form. If your communication requests a response from us, we
@@ -259,23 +257,23 @@
                                         <br>
                                         <h1>LINKS</h1>
                                         <P>
-                                            This site contains links to our social media platforms we consider to be
-                                            interesting. MIDAPPAY is not responsible for the privacy practices <br>
+                                            This site contains links to our social media platforms, we consider to be
+                                            interesting. MIDFEE GLOBAL is not responsible for the privacy practices <br>
                                             or the content of such web sites.
                                         </P>
                                         <br>
                                         <br>
                                         <h3>PUBLIC DISCUSSIONS</h3>
                                         <p>
-                                            This site may provide public opinions for enable the site serve yu tomits
-                                            best and upgrade our services. <br>
+                                            This site may provide public opinions to enable the site serve you more
+                                            appropriately. <br>
                                             Please note that any information you post in these discussions will become
                                             public, so please do not post sensitive information in the public <br>
                                             discussions. Whenever you publicly disclose information online, that
                                             information could be collected and used by others. <br>
                                             We are not responsible for any action or policies of any third parties who
                                             collect information that users disclose in any such forums <br>
-                                            on the web site. MIDDAPPAY does not agree or disagree with any thing posted
+                                            on the web site. MIDFEEGLOBAL.COM does not agree or disagree with any thing posted
                                             on the discussion board. <br>
                                             Also remember that you must comply with our other published policies
                                             regarding postings on our public forums.
@@ -286,33 +284,33 @@
                                             You may access, correct, update, and/or delete any personally-identifiable
                                             information that you submit to the web site. <br>
                                             You may also unsubscribe from mailing lists or any registrations on the web
-                                            site. To do so, please either following instructions <br>
-                                            on the page of the web site on which you have provided such information or
-                                            subscribed or registered or contact us at midappay@gmail.com
+                                            site. To do so, please either follow instructions <br>
+                                            on the page of the web site in which you have provided such information or
+                                            subscribed or registered or contact us at midfeeglobal@gmail.com
                                         </p>
                                         <br>
                                         <h3>CHILDREN’S PRIVACY</h3>
                                         <p>
-                                            MIDAPPAY will not intentionally collect any personal information (such as a
+                                            MIDFEE GLOBAL will not intentionally collect any personal information (such as a
                                             child’s name or email address) from children under the age of 13. <br>
                                             If you think that we have collected personal information from a child under
-                                            the ageof 13, please contact us.
+                                            the age of 13, please contact us.
                                         </p>
                                         <br>
 
                                         <h3>CHANGES</h3>
                                         <p>
-                                            MIDAPPAY reserves the right to modify this statement at any time. <br>
+                                            MIDFEE GLOBAL reserves the right to modify this statement at any time. <br>
                                             Any changes to this Privacy Policy will be listed in this section, and if
                                             such changes are material, <br>
                                             a notice will be included on the home page of the website for a period of
                                             time. <br>
                                             If you have any questions about privacy at any websites operated by
-                                            MIDAPPAY, <br>
-                                            or about our website practices, please contact us at midappay@gmail.com
+                                            MIDFEE GLOBAL, <br>
+                                            or about our website practices, please contact us at midfeeglobal@gmail.com
                                         </p>
 
-                                        <h1>Copyright © 2022 MIDAPPAY</h1>
+                                        <h1>Copyright © 2023 MIDFEE GLOBAL</h1>
 
                                         <p>
                                             Need help?<br>
