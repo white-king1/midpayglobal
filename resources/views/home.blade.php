@@ -8,8 +8,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Midfee Global-Landing Page </title>
-    <meta name="description" content="">
+    <title>Midfeeglobal.com - Never Buy or Sell Online without midfeeglobal.com </title>
+    <meta name="description" content="Midfeeglobal.com is the  most secure third party payment method from a risk perspective of a counterparty,
+    safeguarding both buyers and sellers transactions,
+    all funds transacted using ...
+    ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS here -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
