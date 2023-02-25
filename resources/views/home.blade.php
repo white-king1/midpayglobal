@@ -46,7 +46,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
                                 <a href="{{ route('home') }}">
-                                    <img class="img-fluid" src="/assets/images/white png.png" alt="logo"
+                                    <img class="img-fluid" src="assets/images/white png.png" alt="logo"
                                         width="200">
                                 </a>
                             </div>
@@ -533,7 +533,7 @@
                     <div class="footer-widget mb-30">
                         <div class="logo mt-15 mb-15">
                             <a href="#">
-                                <img class="img-fluid" src="/assets/images/white png.png" alt="logo"
+                                <img class="img-fluid" src="assets/images/white png.png" alt="logo"
                                     width="200">
                             </a>
                         </div>
