@@ -29,8 +29,9 @@ class MyProfileController extends Controller
         Auth::user()->state = $request->state;
         Auth::user()->city = $request->city;
         Auth::user()->zipcode = $request->zipcode;
-
-
+        Auth::user()->bank_name = $request->bank_name;
+        Auth::user()->account_name = $request->account_name;
+        Auth::user()->account_number = $request->account_number;
 
         Auth::user()->image=$imageName;
 
