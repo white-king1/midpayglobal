@@ -158,13 +158,13 @@ Route::get('/accept','AcceptOrderController@accept')->name('accept');
 Route::get('/decline','DeclineController@decline')->name('decline');
 Route::get('/congrats','CongratsSellerController@congrats')->name('congrats');
 Route::get('/decline','DeclineSellerController@decline')->name('decline');
-Route::get('/buyer', 'buyerController@buyer')->name('buyer');
+Route::get('/buyer', 'BuyerController@buyer')->name('buyer');
 
 // VIEW ORDER ROUTE FOR THE BUYER
-Route::get('/view', 'buyerController@view')->name('view');
+Route::get('/view', 'BuyerController@view')->name('view');
 // FOR SELLER BEGINS
-Route::get('/view_seller_order', 'buyerController@viewSeller')->name('view.seller');
-Route::post('/vso_details', 'buyerController@vsoDetails')->name('vso.details');
+Route::get('/view_seller_order', 'BuyerController@viewSeller')->name('view.seller');
+Route::post('/vso_details', 'BuyerController@vsoDetails')->name('vso.details');
 // FOR SELLER ENDS
 
 // FOR BUYER BEGINS
@@ -172,7 +172,7 @@ Route::get('/view_buyer_order', 'buyerController@viewBuyer')->name('view.buyer')
 Route::post('/vbo_details', 'buyerController@vboDetails')->name('vbo.details');
 // FOR BUYER ENDS
 
-Route::post('/buyers_order', 'buyerController@buyersOrder')->name('buyers.order');
+Route::post('/buyers_order', 'BuyerController@buyersOrder')->name('buyers.order');
 
 // VIEW ORDER ROUTE FOR THE BUYER END
 

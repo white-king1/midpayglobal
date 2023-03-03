@@ -109,7 +109,7 @@ class PaymentController extends Controller
         $place->buyer_id=Auth::user()->id;
         $place->save();
 
-        if(Auth::user()->wallet->balance <= $place->deposit + 0.05 * $place->deposit){
+        if(Auth::user()->wallet->balance <= $place->deposit + 0.03 * $place->deposit){
 
            return redirect()->route('insufpay.funds', $place);
 
@@ -117,7 +117,7 @@ class PaymentController extends Controller
 
            $money = $place->deposit;
 
-           $seller= Wallet::where('user_id',$place->seller_id)->first()->increment('balance',$money);
+        //    $seller= Wallet::where('user_id',$place->seller_id)->first()->increment('balance',$money);
 
            $buyer = Wallet::where('user_id',$place->buyer_id)->first()-> decrement ('balance',$money);
 

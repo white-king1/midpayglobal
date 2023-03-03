@@ -21,7 +21,7 @@ class PlaceOrderController extends Controller
         $transaction_id = \Str::random(11);
 
         // Helper::IDGenerator(new PlaceOrder,'transaction_id', 6, 'MPG'. Auth::user()->id);
-        $charge = 0.05*$request->deposit;
+        $charge = 0.03*$request->deposit;
 
         $place = new PlaceOrder;
         $place->transaction_id = $transaction_id;
