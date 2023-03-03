@@ -100,7 +100,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <label class="form-label" for="exampleInputPassword2">CHARGES(Non-Refundable 5% of every
+                                            <label class="form-label" for="exampleInputPassword2">CHARGES(Non-Refundable 3% of every
                                                 deposit amount)</label>
                                             <div class="container card card-body">
                                                 <h4>₦{{ number_format($place->charges) }}</h4>
