@@ -20,12 +20,12 @@
         </div>
         <!-- Container-fluid starts-->
         @if (Session::has('flash_message'))
-        <center>
-            <div class="alert {{ Session::get('flash_type') }} col-md-4">
-                <h6>{{ Session::get('flash_message') }}</h6>
-            </div>
-        </center>
-    @endif
+            <center>
+                <div class="alert {{ Session::get('flash_type') }} col-md-4">
+                    <h6>{{ Session::get('flash_message') }}</h6>
+                </div>
+            </center>
+        @endif
 
         <div class="container-fluid">
             <div class="row">
@@ -42,8 +42,9 @@
                                         <div class="container card card-body" id="input-icons">
                                             <h4>@auth
 
-                                                {{ $place->transaction_id }}
-                                            @endauth</h4>
+                                                    {{ $place->transaction_id }}
+                                                @endauth
+                                            </h4>
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +101,8 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <label class="form-label" for="exampleInputPassword2">CHARGES(Non-Refundable 3% of every
+                                            <label class="form-label" for="exampleInputPassword2">CHARGES(Non-Refundable 3%
+                                                of every
                                                 deposit amount)</label>
                                             <div class="container card card-body">
                                                 <h4>₦{{ number_format($place->charges) }}</h4>
@@ -178,20 +180,34 @@
                                                             CANCEL
                                                         </a>
                                                     @else
-                                                    <input type = "checkbox"> I Agree To <a href="">Terms</a>  & Conditions
+                                                        <div class="row">
+                                                            <div class="col-md-5">
+                                                                <input type="checkbox"> I Agree To <a
+                                                                    href="">Terms</a> & Conditions
+                                                            </div>
 
-                                                        <button class="btn btn-success btn-lg btn-block"
-                                                            value="Pay">
-                                                            PAY
-                                                        </button>
+                                                            <div class="col-md-2" style="margin-bottom: 5%">
+                                                                <button class="btn btn-success btn-lg btn-block"
+                                                                    value="Pay">
 
-                                                        <a href="{{route('wallet.pay',$place)}}" class="btn btn-success btn-lg btn-block"
-                                                            value="Pay">
-                                                            PAY FROM WALLET
-                                                    </a>
+                                                                    <h6>PAY</h6>
+
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-md-5" style="margin-bottom: 5%;" >
+                                                                <a href="{{ route('wallet.pay', $place) }}"
+                                                                    class="btn btn-success btn-lg btn-block"
+                                                                    value="Pay">
+                                                                    <center>
+                                                                    <h4>PAY FROM WALLET</h4>
+                                                                </center>
+                                                                </a>
+                                                            </div>
+                                                        </div>
                                                     @endif
 
-
+<br>
+<br>
                                                 </div>
                                             </div>
                                         </div>

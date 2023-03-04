@@ -185,7 +185,7 @@
                         <div class="section-title text-center pl-40 pr-40 mb-45">
 
                             <h3>How does This Website Work?</h3>
-                            <h5>Easy,Straight Forward and Pricise.With Just 4 steps your Transaction is secured</h5>
+                            <h5>Easy,Straight Forward and Precise.With Just 4 steps your Transaction is secured</h5>
                         </div>
                     </div>
                 </div>

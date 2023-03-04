@@ -117,6 +117,11 @@ class PaymentController extends Controller
 
            $money = $place->deposit;
 
+           $place = PlaceOrder::where('transaction_id', $money)->first();
+           $place->status = 'paid';
+           $place->buyer_id = Auth::user()->id;
+           $place->save();
+
         //    $seller= Wallet::where('user_id',$place->seller_id)->first()->increment('balance',$money);
 
            $buyer = Wallet::where('user_id',$place->buyer_id)->first()-> decrement ('balance',$money);
