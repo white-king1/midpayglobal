@@ -19,7 +19,7 @@ use Paystack;
 class PaymentController extends Controller
 {
 
-/**
+    /**
      * Redirect the User to Paystack Payment Page
      * @return Url
      */
@@ -37,13 +37,13 @@ class PaymentController extends Controller
             'callback_url' => $request->callback_url
         ];
 
-        try{
+        try {
             return Paystack::getAuthorizationUrl($data)->redirectNow();
-        }catch(\Exception $e) {
-            return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
+        } catch (\Exception $e) {
+            return Redirect::back()->withMessage(['msg' => 'The paystack token has expired. Please refresh the page and try again.', 'type' => 'error']);
         }
 
-        $u = User::where('id',$place_id->id)->first();
+        $u = User::where('id', $place_id->id)->first();
         Mail::to($u->email)->send(new PaymentMaid($placeOrder));
     }
 
@@ -61,23 +61,22 @@ class PaymentController extends Controller
         $place->buyer_id = Auth::user()->id;
         $place->save();
 
-        $payment=new Payment();
+        $payment = new Payment();
         $payment->user_id = Auth::user()->id;
-        $payment->email=$paymentDetails['data'] ['customer'] ['email'];
-        $payment->status=$paymentDetails['data']['status'];
-        $payment->amount=$paymentDetails['data']['amount'];
-        $payment->trans_id=$paymentDetails['data']['id'];
-        $payment->ref_id= $reference;
+        $payment->email = $paymentDetails['data']['customer']['email'];
+        $payment->status = $paymentDetails['data']['status'];
+        $payment->amount = $paymentDetails['data']['amount'];
+        $payment->trans_id = $paymentDetails['data']['id'];
+        $payment->ref_id = $reference;
 
-        if($payment->save())
-        {
+        if ($payment->save()) {
             return view('vieworder.success');
         }
         return view('vieworder.form');
     }
 
-// AFTER THE BUYER CLICKS ON RECIEVED IT SHOULD RETURN COMPLETED TRANSACTION
-    public function recievedOrder(  $transaction_id)
+    // AFTER THE BUYER CLICKS ON RECIEVED IT SHOULD RETURN COMPLETED TRANSACTION
+    public function recievedOrder($transaction_id)
     {
 
         $deposit = PlaceOrder::where('transaction_id', $transaction_id)->first();
@@ -86,7 +85,7 @@ class PaymentController extends Controller
 
         if ($deposit->status == 'paid') {
 
-            $wallet= Wallet::where('user_id',$seller->id)->first();
+            $wallet = Wallet::where('user_id', $seller->id)->first();
             $wallet->increment('balance', $deposit->deposit);
             $wallet->save();
 
@@ -105,30 +104,26 @@ class PaymentController extends Controller
     // PAY FROM WALLET
     public function walletPay(Request $request, $place_id)
     {
-        $place= PlaceOrder::find($place_id);
-        $place->buyer_id=Auth::user()->id;
+        $place = PlaceOrder::find($place_id);
+        $place->buyer_id = Auth::user()->id;
         $place->save();
 
-        if(Auth::user()->wallet->balance <= $place->deposit + 0.03 * $place->deposit){
+        if (Auth::user()->wallet->balance <= $place->deposit + 0.03 * $place->deposit) {
 
-           return redirect()->route('insufpay.funds', $place);
+            return redirect()->route('insufpay.funds', $place);
+        } else {
 
-        }else{
+            $money = $place->deposit;
 
-           $money = $place->deposit;
+            $place->status = 'paid';
+            $place->buyer_id = Auth::user()->id;
+            $place->save();
 
-           $place = PlaceOrder::where('transaction_id', $money)->first();
-           $place->status = 'paid';
-           $place->buyer_id = Auth::user()->id;
-           $place->save();
+            //$seller= Wallet::where('user_id',$place->seller_id)->first()->increment('balance',$money);
 
-        //    $seller= Wallet::where('user_id',$place->seller_id)->first()->increment('balance',$money);
-
-           $buyer = Wallet::where('user_id',$place->buyer_id)->first()-> decrement ('balance',$money);
-
+            $buyer = Wallet::where('user_id', $place->buyer_id)->first()->decrement('balance', $money);
         }
         return view('vieworder.success');
-
     }
     /**
      * Display a listing of the resource.

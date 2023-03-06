@@ -318,7 +318,7 @@
                     <div class="col-lg-6">
                         <div class="section-title center-align">
                             <h2>What Our Clients Say’s</h2>
-                            <p>Our Clients have good testimonies after pertronizing us and wishes to do more business with
+                            <p>Our Clients have good testimonies after patronizing us and wishes to do more business with
                                 us, as they always refer people.</p>
                         </div>
                     </div>
