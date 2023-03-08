@@ -227,11 +227,11 @@
                                         <tr>
                                             <td>
                                                 <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                        src="../assets/images/dashboard/rectangle-26.jpg" alt="">
+                                                        src="/assets/images/dashboard/rectangle-26.jpg" alt="">
                                                     <div class="media-body"><a href="blog-single.html">
-                                                            <h5>Google Project Apply Reviwe</h5>
+                                                            <h5>Total sales and  Review</h5>
                                                         </a>
-                                                        <p>Today's News Headlines, Breaking...</p>
+                                                        <p>Today's Transactions...</p>
                                                     </div>
                                                 </div>
                                             </td>
@@ -242,11 +242,11 @@
                                         <tr>
                                             <td>
                                                 <div class="media"><img class="img-fluid me-3 b-r-5"
-                                                        src="../assets/images/dashboard/rectangle-29.jpg" alt="">
+                                                        src="/assets/images/dashboard/rectangle-29.jpg" alt="">
                                                     <div class="media-body"><a href="blog-single.html">
-                                                            <h5>Recruitment in it Department</h5>
+                                                            <h5>Refund Details</h5>
                                                         </a>
-                                                        <p>Technology and Indian Business News...</p>
+                                                        <p>Transaction activities</p>
                                                     </div>
                                                 </div>
                                             </td>
