@@ -64,12 +64,12 @@
                             </p>
                             <p>
                                 We as a team ensures that both parties are satisfied before executing any request from any
-                                of the parties, either(A Buyer and A Seller).
+                                of the parties, either(A Buyer or A Seller).
                             </p>
                             <p>
-                                MIDFEEGLOBAL Stands in the gap as a middle man between both parties, mediating, by securing
-                                any cash deposit made by a Buyer, for a particular service or a group of services a Seller
-                                wishes to render or deliver.Until both parties are satisfied, before we release the
+                                MIDFEEGLOBAL Stands in the gap as a middle man between both parties, by mediating and securing
+                                any cash deposit made by a Buyer for a particular service, or a group of services a Seller
+                                wishes to render or deliver, until both parties are satisfied, before we release the
                                 funds to the client KNOWN AS THE SELLER.
                             </p>
                             <h6>
@@ -151,11 +151,11 @@
                             </div>
                             <div class="choose-content">
                                 <p>QUICKLY DOWNLOAD AND SIGNUP ON MIDFEEGLOBAL FROM YOUR APP STORE OR GOOGLE PLAY STORE.
-                                    <br> As a seller create an invoice on Midfeeglobal and instantly recieve a
+                                    <br> As a seller, create an invoice on Midfeeglobal and instantly recieve a
                                     Transaction ID.
                                 </p>
                                 <p>Ask for refund when you are not Satified with what you recieved from a Seller. <br>
-                                    As a Seller Request for a withdrawal and get credited within 10-15minutes <br>
+                                    As a Seller, request for a withdrawal and get credited within 10-15minutes <br>
                                     and also report any transaction that has not paid you.
                                 </p>
 
@@ -232,10 +232,10 @@
                                                 Buyer</h6>
                                             <ul>
                                                 <li>On your Dahsboard,the BUYER ORDER TRANSACTIONS TABLE,
-                                                    <br> click on "Recieved",
-                                                    <br> To complete your transaction,
-                                                    <br>Automatically an Email will be sent to the Seller to proceed to
-                                                    witdraw
+                                                    <br> click on "Recieved"
+                                                    <br> to complete your transaction.
+                                                    <br>Automatically, an Email will be sent to the Seller to proceed to
+                                                    withdraw
                                                     <br> in which the money will be available in the wallet for withdrawal.
                                                 </li>
                                             </ul>
