@@ -11,7 +11,7 @@
                   <img src="/admin-assets/images/dashboard/Group126%402x.png" class="gradient-corona-img img-fluid" alt="">
                 </div>
                 <div class="col-5 col-sm-7 col-xl-8 p-0">
-                  <h4 class="mb-1 mb-sm-0">Welcome Back</h4>
+                  <h4 class="mb-1 mb-sm-0">Welcome Back <br> {{ Auth::user()->name }}</h4>
                   <p class="mb-0 font-weight-normal d-none d-sm-block">Midfeeglobal Admin Dashboard now with a new facelift for enhanced legibility !</p>
                 </div>
                 <div class="col-3 col-sm-2 col-xl-2 ps-0 text-center">
