@@ -56,9 +56,9 @@
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
 
                 <a class="sidebar-brand brand-logo" href="{{ route('home') }}">
-                    <img class="img-fluid" src="/assets/images/Black png.png" alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="index.html">
-            <img  class="img-fluid" src="/assets/images/Black png.png"alt="logo" />
+                    <img class="img-fluid" src="/assets/images/White png.png" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="{{ route('home') }}">
+            <img  class="img-fluid" src="/assets/images/White png.png"alt="logo" />
                     </a>
             </div>
             <ul class="nav">
@@ -196,6 +196,16 @@
                         <span class="menu-title">Reports</span>
                     </a>
                 </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link"  onclick="logout()" href="">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Logout</span>
+                    </a>
+                    <form action="{{ route('logout') }} " id="logout" method="POST">@csrf
+                    </form>
+                </li>
             </ul>
         </nav>
         <!-- partial -->
@@ -203,8 +213,9 @@
             <!-- partial:partials/_navbar.html -->
             <nav class="navbar p-0 fixed-top d-flex flex-row">
                 <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-                    <a class="navbar-brand brand-logo-mini" href="index.html"><img
-                            src="https://www.bootstrapdash.com/demo/corona/jquery/template/admin-assets/images/logo-mini.svg"
+                    <a class="navbar-brand brand-logo-mini" href="{{route('home')}}">
+                        <img
+                            src="/assets/images/White png.png"
                             alt="logo" /></a>
                 </div>
                 <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
@@ -399,7 +410,7 @@
                                         </div>
 
                                         <div class="preview-item-content">
-                                            <p class="preview-subject mb-1">Log out</p>
+                                            <p class="preview-subject mb-1">LogOut</p>
                                         </div>
                                     </a>
                                     <form action="{{ route('logout') }} " id="logout" method="POST">@csrf

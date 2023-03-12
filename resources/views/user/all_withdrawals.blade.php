@@ -3,17 +3,11 @@
 <div class="main-panel">
     <div class="content-wrapper">
       <div class="page-header">
-        <h3 class="page-title">ALL WITHDRAWALS </h3>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">ALL</a></li>
-            <li class="breadcrumb-item active" aria-current="page">WITHDRAWALS TABLE</li>
-          </ol>
-        </nav>
+        <h3 class="page-title">ALL WITHDRAWALS TABLE</h3>
       </div>
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">WITHDRAWALS table</h4>
+          <h4 class="card-title">Withdrawals Table</h4>
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">
